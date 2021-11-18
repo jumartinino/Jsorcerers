@@ -15,8 +15,8 @@ const Comment = sequelize.define('Comment', {
 
 Comment.associate = function(models){
 
-    Comment.belongsTo(User);
-    Comment.belongsTo(Post);
+    Comment.hasOne(models.User);
+    Comment.belongsTo(models.Post);
 
 }
 

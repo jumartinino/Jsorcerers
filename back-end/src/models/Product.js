@@ -30,8 +30,8 @@ const Product = sequelize.define('Product', {
 
 Product.associate = function(models){
 
-    Product.belongsToMany(models.Cart_Content, {through: 'IsIn', as: 'product'});
-    Product.belongsToMany(models.Favorites, {through: 'IsIn', as:'product'});
+    Product.belongsToMany(models.Cart_Content, {through: 'IsInCartContent', as: 'cartProduct'});
+    Product.belongsToMany(models.Favorites, {through: 'IsInFavorites', as: 'favoritedProduct'});
     Product.belongsTo(models.Post);
 
 }
