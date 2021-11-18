@@ -1,6 +1,6 @@
 import styled from "styled-components/native";
 
-export const ProductDiv = styled.View `
+export const ProductDiv = styled.TouchableOpacity `
     width: 100%;
     display: flex;
     justify-Content: center;
@@ -16,7 +16,6 @@ export const ProductContainer = styled.View `
     flex-Direction: row;
     justify-Content: space-around;
     align-Content: center;
-    background-Color: red;
     margin: 12px 0;
 `;
 
