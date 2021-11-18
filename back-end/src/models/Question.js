@@ -1,5 +1,8 @@
 const DataTypes = require("sequelize");
+const { models } = require("../config/sequelize");
 const sequelize = require("../config/sequelize");
+const Post = require("./Post");
+const User = require("./User");
 
 const Question = sequelize.define('Question', {
     
@@ -13,6 +16,11 @@ const Question = sequelize.define('Question', {
     }
 });
 
+Question.associate = function(models){
 
+    Question.hasOne(User);
+    Question.belongsTo(Post);
+
+}
 
 module.exports = Question;

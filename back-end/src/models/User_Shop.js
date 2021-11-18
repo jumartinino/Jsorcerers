@@ -14,6 +14,11 @@ const User_Shop = sequelize.define('User_Shop', {
     }
 });
 
+User_Shop.associate = function(models) {
 
+    User_Shop.hasMany(models.Post);
+    User_Shop.hasOne(models.User);
+
+}
 
 module.exports = User_Shop;

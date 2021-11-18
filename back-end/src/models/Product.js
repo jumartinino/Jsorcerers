@@ -28,6 +28,12 @@ const Product = sequelize.define('Product', {
 
 });
 
+Product.associate = function(models){
 
+    Product.belongsToMany(models.Cart_Content, {through: 'IsIn', as: 'product'});
+    Product.belongsToMany(models.Favorites, {through: 'IsIn', as:'product'});
+    Product.belongsTo(models.Post);
+
+}
 
 module.exports = Product;
