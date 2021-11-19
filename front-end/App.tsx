@@ -1,7 +1,6 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import ProductsCategory from './src/pages/ProductsCategory';
+import ProductsCategory from './src/screens/ProductsCategory/ProductsCategory.tsx';
 
 export default function App() {
   return (
