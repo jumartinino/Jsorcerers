@@ -1,11 +1,5 @@
 import React from 'react';
-import {
-  Animated,
-  TouchableOpacity,
-  View,
-  Text,
-  StyleSheet
-} from 'react-native';
+import { Animated } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 const HEADER_HEIGHT = 200;
@@ -28,7 +22,10 @@ const ProductBanner = ({ animatedValue }) => {
         right: 0,
         zIndex: 10,
         height: headerHeight,
-        backgroundColor: 'lightblue'
+        backgroundColor: 'lightblue',
+        borderRadius: 10,
+        borderTopLeftRadius: 0,
+        borderTopRightRadius: 0,
       }}
     />
   );

@@ -11,7 +11,7 @@ export const ProductDiv = styled.TouchableOpacity `
 
 export const ProductContainer = styled.View `
     width: 90%;
-    height: 25vh;
+    height: 200px;
     display: flex;
     flex-Direction: row;
     justify-Content: space-around;
@@ -27,6 +27,7 @@ export const ProductPhoto = styled.View `
     margin-Top: auto;
     margin-Bottom: auto;
     width: 45%;
+    object-fit: contain;
 `;
 
 export const ProductDescriptionDiv = styled.View `
