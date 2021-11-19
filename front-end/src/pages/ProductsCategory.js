@@ -31,11 +31,21 @@ export default function ProductsCategory() {
                         <Text style={{ fontSize: 24 }}>Produtos:</Text>
                     </View>
 
-                    <ProductCard></ProductCard>
-                    <ProductCard></ProductCard>
-                    <ProductCard></ProductCard>
-                    <ProductCard></ProductCard>
-                    <ProductCard></ProductCard>
+                    {/* {  Data.map(produtos => {
+                        return(
+                            <ProductCard
+                                ProductTitle={produtos.title}
+                                ProductRating={produtos.rating}
+                                ProductPrice={produtos.price}
+                                ProductDescription={produtos.description}
+                            />
+                        )
+                    })} */}
+                    
+                    <ProductCard/>
+                    <ProductCard/>
+                    <ProductCard/>
+                    <ProductCard/>
                 </ScrollView>
             </SafeAreaView>
         </SafeAreaProvider>
