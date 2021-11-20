@@ -1,11 +1,14 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
+import Register from './src/screens/Register'
+
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-    </View>
+    <Register></Register>
+    // <View style={styles.container}>
+    //   <Register></Register>
+    // </View>
   );
 }
 
