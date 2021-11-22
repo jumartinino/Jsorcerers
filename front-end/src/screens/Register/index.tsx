@@ -22,6 +22,10 @@ export default function Login() {
         console.log(data);
     }
 
+    const validAddress = new RegExp(
+        "[A-Za-z0-9'\.\-\s\,]"
+     );
+
     interface FormData {
         name: string;
         email: string;
@@ -61,6 +65,31 @@ export default function Login() {
                         defaultValue=''
                     />
                     {errors.name && <Text style={{ color: 'red' }}>{errors.name.message}</Text>}
+                </InputDiv>
+
+                {/*Input de endereço*/}
+                <InputDiv>
+                    <Controller
+                        control={control}
+                        render={({ field: { onBlur, onChange, value } }) => (
+                            <InputField
+                                placeholder='Endereço'
+                                onBlur={onBlur}
+                                onChangeText={(value: any) => onChange(value)}
+                                value={value}
+                            />
+                        )}
+                        rules={{
+                            required: 'O nome é obrigatório.',
+                            pattern: {
+                                value: validAddress ,
+                                message: 'Endereço inválido.'
+                            }
+                        }}
+                        name='address'
+                        defaultValue=''
+                    />
+                    {errors.address && <Text style={{ color: 'red' }}>{errors.address.message}</Text>}
                 </InputDiv>
 
                 {/* Input data de aniversário */}
