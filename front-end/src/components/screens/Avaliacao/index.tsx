@@ -41,7 +41,7 @@ export default function Avaliacao() {
 
   const {control, handleSubmit, getValues} = useForm({mode:'onTouched'});
 
-     _onSelect = ( item ) => {
+   const _onSelect = ( item ) => {
       console.log(item);
     };
 
