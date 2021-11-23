@@ -99,3 +99,12 @@ export const SeeMore = styled.TouchableOpacity`
     align-items: center;
     font-size: 20px;
 `;
+
+export const Review = styled.TouchableOpacity`
+    border: 1px #39280D solid;
+    border-radius: 10;
+    padding: 10px 37%;
+    width: 90%;
+    font-size: 22px;
+    font-weight: bold;
+`;

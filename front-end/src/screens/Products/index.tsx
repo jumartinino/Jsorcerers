@@ -1,7 +1,6 @@
 import React from "react";
 import { View } from "react-native";
 import { Text, Image } from "react-native";
-import { TouchableOpacity } from "react-native-gesture-handler";
 import {
     Product,
     ProductTitle,
@@ -16,11 +15,12 @@ import {
     StoreProfilePic,
     StoreButton,
     SectionTitle,
-    DivisionBar,
-    SeeMore
-} from './styles.tsx'
+    SeeMore,
+    Review
+} from './styles'
 
 import ProductComment from '../../components/ProductComment'
+import ProductReviews from '../../components/ProductReviews'
 
 export default function Products(){
     return(
@@ -61,8 +61,19 @@ export default function Products(){
             
             <SeeMore>Ver mais</SeeMore>
 
-
             <SectionTitle>Avaliações</SectionTitle>
+
+            <Review>Avaliar</Review>
+
+            {/* {Data.map = (data) => {
+                <ProductReviews comentario={data}/>
+            }} */}
+
+            <ProductReviews/>
+            <ProductReviews/>
+
+            <SeeMore>Ver mais</SeeMore>
+
             <SectionTitle>Produtos na mesma categoria</SectionTitle>
         </View>
     )
