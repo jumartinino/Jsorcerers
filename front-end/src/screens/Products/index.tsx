@@ -20,6 +20,8 @@ import {
     SeeMore
 } from './styles.tsx'
 
+import ProductComment from '../../components/ProductComment'
+
 export default function Products(){
     return(
         <View style={{flex: 1, alignItems: "center"}}>
@@ -49,8 +51,17 @@ export default function Products(){
             </StoreDiv>
 
             <SectionTitle>Perguntas e Respostas</SectionTitle>
-            <DivisionBar/>
+            
+            {/* {Data.map = (data) => {
+                <ProductComment comentario={data}/>
+            }} */}
+
+            <ProductComment/>
+            <ProductComment/>
+            
             <SeeMore>Ver mais</SeeMore>
+
+
             <SectionTitle>Avaliações</SectionTitle>
             <SectionTitle>Produtos na mesma categoria</SectionTitle>
         </View>

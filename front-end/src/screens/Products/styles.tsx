@@ -89,15 +89,10 @@ export const SectionTitle = styled.Text`
     color: #39280D;
 `;
 
-export const DivisionBar = styled.View`
-    height: 1px;
-    width: 90%;
-    border: 1px #887E39 solid;
-`;
-
 export const SeeMore = styled.TouchableOpacity`
     width: 100%;
     height: 30px;
+    margin-top: 10px;
     background-color: #A0AA60;
     display: flex;
     justify-content: center;
