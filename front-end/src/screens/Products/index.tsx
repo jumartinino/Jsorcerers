@@ -21,6 +21,7 @@ import {
 
 import ProductComment from '../../components/ProductComment'
 import ProductReviews from '../../components/ProductReviews'
+import ProductSameCategory from '../../components/ProductSameCategory'
 
 export default function Products(){
     return(
@@ -75,6 +76,8 @@ export default function Products(){
             <SeeMore>Ver mais</SeeMore>
 
             <SectionTitle>Produtos na mesma categoria</SectionTitle>
+
+            <ProductSameCategory></ProductSameCategory>
         </View>
     )
 }
