@@ -1,5 +1,6 @@
 const DataTypes = require("sequelize");
 const sequelize = require("../config/sequelize");
+const User = require("./User");
 
 const Comment = sequelize.define('Comment', {
     
@@ -12,6 +13,11 @@ const Comment = sequelize.define('Comment', {
 
 });
 
+Comment.associate = function(models){
 
+    Comment.hasOne(models.User);
+    Comment.belongsTo(models.Post);
+
+}
 
 module.exports = Comment;

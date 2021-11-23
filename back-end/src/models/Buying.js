@@ -1,4 +1,5 @@
 const DataTypes = require("sequelize");
+const { model } = require("../config/sequelize");
 const sequelize = require("../config/sequelize");
 
 const Buying = sequelize.define('Buying', {
@@ -9,6 +10,10 @@ const Buying = sequelize.define('Buying', {
 
 });
 
+Buying.associate = function(models){
 
+    Buying.hasOne(models.Cart);
+
+}
 
 module.exports = Buying;

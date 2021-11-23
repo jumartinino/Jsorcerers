@@ -14,6 +14,11 @@ const User_Shop = sequelize.define('User_Shop', {
     }
 });
 
+User_Shop.associate = function(models) {
 
+    User_Shop.belongsToMany(models.Post, {through: 'IsFromUser', as:'ShopFromUser'});
+    User_Shop.belongsTo(models.User);
+
+}
 
 module.exports = User_Shop;

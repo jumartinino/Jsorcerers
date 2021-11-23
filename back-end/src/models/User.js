@@ -24,6 +24,13 @@ const User = sequelize.define('User', {
         allowNull: false
     },
 
+    endereco:{
+
+        type: DataTypes.STRING,
+        allowNull: false
+
+    },
+
     data_nasc:{
 
         type: DataTypes.DATEONLY,
@@ -39,6 +46,14 @@ const User = sequelize.define('User', {
     }
 });
 
+User.associate = function(models) {
 
+    User.hasMany(models.Cart);
+    User.hasOne(models.Favorites);
+    User.hasMany(models.User_Shop);
+    User.belongsToMany(models.Comment, {through: "Commented", as:"userCommenting"});
+    User.belongsToMany(models.Question, {through: "madeQuestion", as: "userQuestioning"})
+
+}
 
 module.exports = User;
