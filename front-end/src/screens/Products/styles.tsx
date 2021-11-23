@@ -74,6 +74,19 @@ export const StoreProfilePic = styled.Image`
     border-radius: 100;
 `;
 
+export const StoreNameNRating = styled.View`
+    display: flex;
+    flex-direction: column;
+`;
+
+export const StoreName = styled.Text`
+    font-size: 20px;
+`;
+
+export const StoreRating = styled.Text`
+    font-size: 20px;
+`;
+
 export const StoreButton = styled.TouchableOpacity`
     background-color: #A0AA60;
     display: flex;

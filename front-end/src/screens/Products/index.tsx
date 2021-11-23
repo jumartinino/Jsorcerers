@@ -13,6 +13,9 @@ import {
     FavoritsNCommentaries,
     StoreDiv,
     StoreProfilePic,
+    StoreNameNRating,
+    StoreName,
+    StoreRating,
     StoreButton,
     SectionTitle,
     SeeMore,
@@ -47,7 +50,10 @@ export default function Products(){
 
             <StoreDiv>
                 <StoreProfilePic source={{uri: 'https://reactjs.org/logo-og.png'}}/>
-                <Text>Rafael</Text>
+                <StoreNameNRating>
+                    <StoreName>Name</StoreName>
+                    <StoreRating>4*</StoreRating>
+                </StoreNameNRating>
                 <StoreButton>Ver Loja</StoreButton>
             </StoreDiv>
 
