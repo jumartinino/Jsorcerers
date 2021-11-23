@@ -9,6 +9,7 @@ const QuestionController = require('../controllers/QuestionController');
 const User_ShopController = require('../controllers/User_ShopController');
 const UserController = require('../controllers/UserController');
 const router = Router();
+const adminMiddleware = require("../middlewares/admin");
 
 router.get('/buys',BuyingController.index);
 router.get('/buys/:id',BuyingController.show);
@@ -38,7 +39,7 @@ router.get('/posts',PostController.index);
 router.get('/posts/:id',PostController.show);
 router.post('/posts',PostController.create);
 router.put('/posts/:id', PostController.update);
-router.delete('/posts/:id', PostController.destroy);
+router.delete('/posts/:id', adminMiddleware, PostController.destroy);
 
 router.get('/products',ProductController.index);
 router.get('/products/:id',ProductController.show);
@@ -62,6 +63,6 @@ router.get('/users',UserController.index);
 router.get('/users/:id',UserController.show);
 router.post('/users',UserController.create);
 router.put('/users/:id', UserController.update);
-router.delete('/users/:id', UserController.destroy);
+router.delete('/users/:id', adminMiddleware, UserController.destroy);
 
 module.exports = router;
