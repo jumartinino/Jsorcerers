@@ -53,6 +53,10 @@ export const FavoritsNCommentariesDiv = styled.View`
     align-items: center;
 `;
 
+export const FavoritsNCommentaries = styled.TouchableOpacity`
+    font-size: 24;
+`;
+
 export const StoreDiv = styled.View`
     width: 100%;
     margin-top: 20px;
@@ -76,4 +80,27 @@ export const StoreButton = styled.TouchableOpacity`
     justify-content: center;
     align-items: center;
     padding: 5px 15px;
+`;
+
+export const SectionTitle = styled.Text`
+    font-size: 25px;
+    font-weight: bold;
+    margin: 25px;
+    color: #39280D;
+`;
+
+export const DivisionBar = styled.View`
+    height: 1px;
+    width: 90%;
+    border: 1px #887E39 solid;
+`;
+
+export const SeeMore = styled.TouchableOpacity`
+    width: 100%;
+    height: 30px;
+    background-color: #A0AA60;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
 `;

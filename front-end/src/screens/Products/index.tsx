@@ -11,9 +11,13 @@ import {
     BuyButton,
     BuyText,
     FavoritsNCommentariesDiv,
+    FavoritsNCommentaries,
     StoreDiv,
     StoreProfilePic,
-    StoreButton
+    StoreButton,
+    SectionTitle,
+    DivisionBar,
+    SeeMore
 } from './styles.tsx'
 
 export default function Products(){
@@ -34,8 +38,8 @@ export default function Products(){
             </BuyButton>
 
             <FavoritsNCommentariesDiv>
-                <Text style={{fontSize: 24}}>Favorite</Text>
-                <Text style={{fontSize: 24}}>Comente</Text>
+                <FavoritsNCommentaries>Favorite</FavoritsNCommentaries>
+                <FavoritsNCommentaries>Comente</FavoritsNCommentaries>
             </FavoritsNCommentariesDiv>
 
             <StoreDiv>
@@ -44,7 +48,11 @@ export default function Products(){
                 <StoreButton>Ver Loja</StoreButton>
             </StoreDiv>
 
-            
+            <SectionTitle>Perguntas e Respostas</SectionTitle>
+            <DivisionBar/>
+            <SeeMore>Ver mais</SeeMore>
+            <SectionTitle>Avaliações</SectionTitle>
+            <SectionTitle>Produtos na mesma categoria</SectionTitle>
         </View>
     )
 }
