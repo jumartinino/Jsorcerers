@@ -24,6 +24,13 @@ const User = sequelize.define('User', {
         allowNull: false
     },
 
+    endereco:{
+
+        type: DataTypes.STRING,
+        allowNull: false
+
+    },
+
     data_nasc:{
 
         type: DataTypes.DATEONLY,
