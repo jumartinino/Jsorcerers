@@ -103,8 +103,10 @@ export const SeeMore = styled.TouchableOpacity`
 export const Review = styled.TouchableOpacity`
     border: 1px #39280D solid;
     border-radius: 10;
-    padding: 10px 37%;
+    padding: 10px;
+    text-align: center;
     width: 90%;
     font-size: 22px;
     font-weight: bold;
+    margin-bottom: 10px;
 `;
