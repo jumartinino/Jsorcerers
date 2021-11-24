@@ -10,9 +10,25 @@ interface Data {
 
 export const AuthContext = createContext<Data>({} as Data);
 
+const [authorization, setAuthorization] = useState('');
+const [checkLogIn, setcheckLogIn] = useState(false);
+
 const AuthProvider =(props:any)=>{
+
+const user_token= async(){
+    let token ='';
+    try{
+        const value=await AsyncStorage.getItem ('token');
+        if(value !== null){
+            token = 'Bearer '.concat(value);
+        }
+    }   catch(e){
+        console.log('Sem token')  
+    }
+}    
+
     return(
-        <AuthContext.Provider>
+        <AuthContext.Provider value =  {{token: authorization, setToken: setAuthorization, signed: checkLogIn}}>
             {props.children}
         </AuthContext.Provider>
     )
