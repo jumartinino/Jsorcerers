@@ -4,9 +4,15 @@ import ProductsCategory from './src/screens/ProductsCategory/ProductsCategory.ts
 
 import Register from './src/screens/Register'
 
+import AuthProvider from './src/contexts/auth';
+
 export default function App() {
   return (
     <View style={styles.container}>
+      <AuthProvider>
+
+        
+      </AuthProvider>
       <Text>Hello World!</Text>
     </View>
   );
