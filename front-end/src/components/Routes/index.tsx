@@ -13,7 +13,7 @@ import Cart from '../screens/Cart/index';
 
 export default function Routes() {
   return(
-      <Tab.Navigator tabBarOptions={{
+      <Tab.Navigator initialRouteName='Home' tabBarOptions={{
         activeTintColor: COLORS.darkGreen
       }}
       
