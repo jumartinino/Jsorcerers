@@ -2,10 +2,12 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import ProductsCategory from './src/screens/ProductsCategory/ProductsCategory.tsx';
 
+import Register from './src/screens/Register'
+
 export default function App() {
   return (
     <View style={styles.container}>
-      <ProductsCategory></ProductsCategory>
+      <Text>Hello World!</Text>
     </View>
   );
 }
