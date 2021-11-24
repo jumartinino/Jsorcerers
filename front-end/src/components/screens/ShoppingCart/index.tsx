@@ -10,8 +10,7 @@ const ListItem = ({ item,onSubtract,onAdd }) => (
         <Text style={styles.name}>
         {item.name} - 
         </Text>
-        <Text style={styles.price}>R$                     {item.price}
-        </Text>
+        <Text style={styles.price}>R$ {item.price}</Text>
       </View>
 
       <View>
