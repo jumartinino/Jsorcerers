@@ -14,10 +14,9 @@ const HomeScreen=()=> {
       <ScrollView>
 
         <View style={styles.header}>
-          <Text style={styles.title}>Drawer</Text>
           <Image
             style={styles.profile} 
-            source={require('../Images/rafael.jpg')}
+            source={require('../../Images/rafael.jpg')}
           />
         </View>
           <View style={styles.searchContainer}>
@@ -32,7 +31,7 @@ const HomeScreen=()=> {
 
               <View style={styles.categoriesPhotos}>
                   <TouchableOpacity>
-                    <ImageBackground style={styles.eachPhoto} source={require('../Images/mangaDef.jpg')}>
+                    <ImageBackground style={styles.eachPhoto} source={require('../../Images/mangaDef.jpg')}>
                     <View style={styles.textView}>
                       <Text style={styles.photoText}>Mangá</Text>
                     </View>
@@ -40,7 +39,7 @@ const HomeScreen=()=> {
                   </TouchableOpacity>
 
                   <TouchableOpacity>
-                    <ImageBackground style={styles.eachPhoto} source={require('../Images/boardDef.jpg')}>
+                    <ImageBackground style={styles.eachPhoto} source={require('../../Images/boardDef.jpg')}>
                     <View style={styles.textView}>
                       <Text style={styles.photoText}>Board Game</Text>
                     </View>
@@ -48,7 +47,7 @@ const HomeScreen=()=> {
                   </TouchableOpacity>
 
                   <TouchableOpacity >
-                    <ImageBackground style={styles.eachPhoto} source={require('../Images/actionDef.jpg')}>
+                    <ImageBackground style={styles.eachPhoto} source={require('../../Images/actionDef.jpg')}>
                     <View style={styles.textView}>
                       <Text style={styles.photoText}>Action Figures</Text>
                     </View>
@@ -56,7 +55,7 @@ const HomeScreen=()=> {
                   </TouchableOpacity>
 
                   <TouchableOpacity >
-                    <ImageBackground style={styles.eachPhoto} source={require('../Images/funkoDef.jpg')}>
+                    <ImageBackground style={styles.eachPhoto} source={require('../../Images/funkoDef.jpg')}>
                     <View style={styles.textView}>
                       <Text style={styles.photoText}>Funko Pop</Text>
                     </View>
@@ -79,19 +78,19 @@ const HomeScreen=()=> {
 
                 <View style={styles.productsColumn1}>
                   <TouchableOpacity style={styles.productsEach}>
-                      <Image source={require('../Images/boardprod.png')} style={styles.photo}/>
+                      <Image source={require('../../Images/boardprod.png')} style={styles.photo}/>
                       <Text style={styles.productText}>Escape Room: Board Game</Text>
                       <Text style={styles.productPrice}>R$9999,99</Text>
                   </TouchableOpacity>
 
                   <TouchableOpacity style={styles.productsEach}>
-                      <Image source={require('../Images/boardprod.png')} style={styles.photo}/>
+                      <Image source={require('../../Images/boardprod.png')} style={styles.photo}/>
                       <Text style={styles.productText}>Escape Room: Board Game</Text>
                       <Text style={styles.productPrice}>R$9999,99</Text>
                   </TouchableOpacity>
 
                   <TouchableOpacity style={styles.productsEach}>
-                      <Image source={require('../Images/boardprod.png')} style={styles.photo}/>
+                      <Image source={require('../../Images/boardprod.png')} style={styles.photo}/>
                       <Text style={styles.productText}>Escape Room: Board Game</Text>
                       <Text style={styles.productPrice}>R$9999,99</Text>
                   </TouchableOpacity>
@@ -99,19 +98,19 @@ const HomeScreen=()=> {
 
                 <View style={styles.productsColumn2}>
                   <TouchableOpacity style={styles.productsEach}>
-                      <Image source={require('../Images/boardprod.png')} style={styles.photo}/>
+                      <Image source={require('../../Images/boardprod.png')} style={styles.photo}/>
                       <Text style={styles.productText}>Escape Room: Board Game</Text>
                       <Text style={styles.productPrice}>R$9999,99</Text>
                   </TouchableOpacity>
 
                   <TouchableOpacity style={styles.productsEach}>
-                      <Image source={require('../Images/boardprod.png')} style={styles.photo}/>
+                      <Image source={require('../../Images/boardprod.png')} style={styles.photo}/>
                       <Text style={styles.productText}>Escape Room: Board Game</Text>
                       <Text style={styles.productPrice}>R$9999,99</Text>
                   </TouchableOpacity>
 
                   <TouchableOpacity style={styles.productsEach}>
-                      <Image source={require('../Images/boardprod.png')} style={styles.photo}/>
+                      <Image source={require('../../Images/boardprod.png')} style={styles.photo}/>
                       <Text style={styles.productText}>Escape Room: Board Game</Text>
                       <Text style={styles.productPrice}>R$9999,99</Text>
                   </TouchableOpacity>
@@ -132,13 +131,10 @@ const styles = StyleSheet.create({
     paddingHorizontal:10,
     marginTop:30,
   },
-  title:{
-    backgroundColor:COLORS.white,
-  },
   profile:{
     height:50,
     width:50,
-    borderRadius:25,  
+    borderRadius:25,
   },
   searchContainer:{
       borderRadius:10,
