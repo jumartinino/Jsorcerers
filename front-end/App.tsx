@@ -1,11 +1,13 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
-import Products from './src/screens/Products';
+import Register from './src/screens/Register'
 
 export default function App() {
   return (
-    <Products></Products>
+    <View style={styles.container}>
+      <Text>Hello World!</Text>
+    </View>
   );
 }
 
