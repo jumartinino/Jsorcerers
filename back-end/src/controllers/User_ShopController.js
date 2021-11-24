@@ -1,5 +1,6 @@
 const { response } = require('express');
 const User_shop = require('../models/User_Shop');
+const User = require('../models/User');
 
 const create = async(req,res) => {
     try{

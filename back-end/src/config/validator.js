@@ -3,6 +3,7 @@ const { body } = require("express-validator");
 const validationUser = (method) =>{
     switch(method){
         case 'create': {
+            console.log("pssou aqui");
             return [
                 
                 body('name')

@@ -1,9 +1,12 @@
 const { response } = require('express');
 const User = require("../models/User");
 const Auth = require("../config/auth");
+const {validationResult} = require('express-validator');
 
 const create = async(req,res) => {
 	try {
+
+        validationResult(req).throw();
 		const { password } = req.body;
 		const hashAndSalt = Auth.generatePassword(password);
 		const salt = hashAndSalt.salt;
@@ -49,7 +52,10 @@ const show = async(req,res) => {
 const update = async(req,res) => {
     const {id} = req.params;
     try {
-        const [updated] = await User.update(req.body, {where: {id: id}});
+        const token = Auth.getToken(req);
+        const payload = Auth.decodeJwt(token);
+
+        const [updated] = await User.update(req.body, {where: {id: payload.sub}});
         if(updated) {
             const user = await User.findByPk(id);
             return res.status(200).send(user);
