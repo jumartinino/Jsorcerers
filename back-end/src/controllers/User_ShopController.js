@@ -56,10 +56,44 @@ const destroy = async(req,res) => {
     }
 };
 
+const addUserShopPhoto = async(req, res) => {
+	try {
+		const {id} = req.params;
+		const user_shop = await User_Shop.findByPk(id, {include:{model: Photo}});
+		if(req.file){
+			const path = process.env.APP_URL + "/uploads/" + req.file.filename;
+			console.log("path");
+
+			const photo = await Photo.create({
+				path: path,
+			});
+			await user_shop.addPhoto(photo);
+		}
+		await user_shop.reload();
+		return res.status(200).json(user_shop);
+	} catch (e) {
+		return res.status(500).json(e + "!");
+	}
+}
+const removeUserShopPhoto = async(req, res) => {
+	try {
+		const {id} = req.params;
+		const photo  = await Photo.findByPk(id);
+		const pathDb = photo.path.split("/").slice(-1)[0];
+		await fsPromise.unlink(path.join(__dirname, "..", "..", "uploads", pathDb));
+		await photo.destroy();
+		return res.status(200).json("Foto deletada com sucesso");
+	} catch (e) {
+		return res.status(500).json(e + "!");
+	}
+}
+
 module.exports = {
     index,
     show,
     create,
     update,
     destroy,
+    addUserShopPhoto,
+    removeUserShopPhoto
 };
