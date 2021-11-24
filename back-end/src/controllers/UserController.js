@@ -1,14 +1,40 @@
 const { response } = require('express');
-const User = require('../models/User');
+const User = require("../models/User");
+const Auth = require("../config/auth");
 
 const create = async(req,res) => {
-    try{
-          const user = await User.create(req.body);
-          return res.status(201).json({message: "Usuário cadastrado com sucesso!", user: user});
-      }catch(err){
-          res.status(500).json({error: err});
-      }
-};
+	try {
+		const { password } = req.body;
+		const hashAndSalt = Auth.generatePassword(password);
+		const salt = hashAndSalt.salt;
+		const hash = hashAndSalt.hash;
+		const newUserData = {
+            profile_pic = req.body.profile_pic,
+			name: req.body.name,
+            email: req.body.email,
+			hash: hash,
+			salt: salt,
+			endereco: req.body.endereco,
+			data_nasc: req.body.data_nasc,
+            is_mod: req.body.is_mod
+			
+		}
+		const user = await User.create(newUserData);
+		return res.status(201).json({user: user});
+	} catch (e) {
+		return res.status(500).json({err: e});
+	}
+}
+
+const show = async(req,res) => {
+	try {
+		const {id} = req.params;
+		const user = await User.findByPk(id);
+		return res.status(200).json({user: user});
+	} catch (e) {
+		return res.status(500).json({err: e});
+	}
+}
 
 const index = async(req,res) => {
     try {

@@ -18,11 +18,15 @@ const User = sequelize.define('User', {
         allowNull: false
     },
 
-    password: {
-
-        type: DataTypes.STRING,
+    hash: {
+		type: DataTypes.STRING,
         allowNull: false
-    },
+	},
+
+	salt: {
+		type: DataTypes.STRING,
+        allowNull: false
+	},
 
     endereco:{
 

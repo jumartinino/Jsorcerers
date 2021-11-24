@@ -1,4 +1,5 @@
 const { Router } = require('express');
+const AuthController = require('../controllers/AuthController');
 const BuyingController = require('../controllers/BuyingController');
 const CartController = require('../controllers/CartController');
 const CommentController = require('../controllers/CommentController');
@@ -11,6 +12,12 @@ const UserController = require('../controllers/UserController');
 const router = Router();
 const adminMiddleware = require("../middlewares/admin");
 const validator = require("../config/validator");
+const passport = require("passport");
+
+router.use("/private", passport.authenticate('jwt', {session: false}));
+
+router.get('/private/getDetails', AuthController.getDetails);
+router.post('/login', AuthController.login);
 
 router.get('/buys',BuyingController.index);
 router.get('/buys/:id',BuyingController.show);
