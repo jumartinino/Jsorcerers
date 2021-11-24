@@ -1,6 +1,6 @@
 import React = require('react');
 import {View, Text, TextInput, StyleSheet, SafeAreaView, StatusBar, Image, ScrollView, TouchableOpacity,ImageBackground} from 'react-native';
-import COLORS from '../../Colors';
+import COLORS from '../../components/Colors/Colors';
 
 import Icon from 'react-native-vector-icons/MaterialIcons';
 

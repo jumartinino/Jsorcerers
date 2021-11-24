@@ -2,7 +2,7 @@ import React from "react";
 import { Text, StyleSheet, View, SafeAreaView, StatusBar,TouchableOpacity} from "react-native";
 import {  useForm } from 'react-hook-form';
 import RadioForm from 'react-native-radio-form';
-import COLORS from '../../Colors/Colors';
+import COLORS from '../../components/Colors/Colors';
 
 const mockData1 = [
     {
@@ -41,7 +41,7 @@ export default function Avaliacao() {
 
   const {control, handleSubmit, getValues} = useForm({mode:'onTouched'});
 
-   const _onSelect = ( item ) => {
+   const _onSelect = ( item: any ) => {
       console.log(item);
     };
 
@@ -65,7 +65,7 @@ export default function Avaliacao() {
               initial={6}
               formHorizontal={false}
               labelHorizontal={true}
-              onPress={(item) => this._onSelect(item)}
+              onPress={(item: any) => this._onSelect(item)}
           />
       </View>
 

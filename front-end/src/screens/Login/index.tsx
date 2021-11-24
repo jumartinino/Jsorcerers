@@ -1,7 +1,8 @@
-import React = require('react');
+// import React = require('react');
+import React from 'react';
 import {View, Text, TextInput, TouchableOpacity, StyleSheet,Image, SafeAreaView, StatusBar, ScrollView} from 'react-native';
 import { Controller, useForm } from 'react-hook-form';
-import COLORS from '../../Cores';
+import COLORS from '../../components/Colors/Colors';
 
 export default function Login() {
   const {control, handleSubmit, formState:{errors}, getValues} = useForm({mode:'onTouched'});
