@@ -9,7 +9,7 @@ const create = async(req,res) => {
 		const salt = hashAndSalt.salt;
 		const hash = hashAndSalt.hash;
 		const newUserData = {
-            profile_pic = req.body.profile_pic,
+            profile_pic: req.body.profile_pic,
 			name: req.body.name,
             email: req.body.email,
 			hash: hash,
@@ -26,15 +26,6 @@ const create = async(req,res) => {
 	}
 }
 
-const show = async(req,res) => {
-	try {
-		const {id} = req.params;
-		const user = await User.findByPk(id);
-		return res.status(200).json({user: user});
-	} catch (e) {
-		return res.status(500).json({err: e});
-	}
-}
 
 const index = async(req,res) => {
     try {

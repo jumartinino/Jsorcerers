@@ -1,5 +1,5 @@
 const { response } = require('express');
-const Favorite = require('../models/Favorite');
+const Favorite = require('../models/Favorites');
 
 const create = async(req,res) => {
     try{
