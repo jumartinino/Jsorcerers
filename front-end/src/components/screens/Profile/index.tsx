@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, TextInput, StyleSheet, SafeAreaView, StatusBar, Image, ScrollView, TouchableOpacity,ImageBackground} from 'react-native';
+import {View, Text, StyleSheet, SafeAreaView, StatusBar, Image, ScrollView, TouchableOpacity,ImageBackground} from 'react-native';
 import COLORS from '../../Colors';
 
 import Icon from 'react-native-vector-icons/Entypo';
@@ -31,7 +31,7 @@ export default function Profile() {
           </View>
 
           <View style={styles.dados}>
-            <Text>Nome: Pedro Alves Faria</Text>
+            <Text>Nome: Rafael Alves Faria</Text>
             <Text>Cpf: 123.456.789-10</Text>
             <Text>Email: Rafael@email.com</Text>
             <Text>Endereço: Rua das pedras 123, bairro alto</Text>
@@ -105,7 +105,7 @@ export default function Profile() {
         
             <TouchableOpacity>
               <View style={styles.button}>
-                <Text style={styles.buttonTitle }>Comece a vender na GG</ Text>
+                <Text style={styles.buttonTitle }>Crie a sua loja</ Text>
               </View>
             </TouchableOpacity>
 
@@ -125,7 +125,8 @@ const styles= StyleSheet.create({
   title:{
     marginTop:18,
     fontSize:20,
-    fontWeight:'bold'
+    fontWeight:'bold',
+    color:COLORS.darkBrown,
   },
   profile:{
     height:70,
