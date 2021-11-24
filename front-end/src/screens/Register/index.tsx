@@ -13,6 +13,7 @@ import {
     RegisterButton,
     RegisterButtonText,
 } from './styles.tsx';
+
 import api from "../../services/api";
 
 export default function Login() {
@@ -27,10 +28,6 @@ export default function Login() {
         },
         (error => ('Cadastro não pode ser concluído')))      
     }
-
-
-
-
 
     const validAddress = new RegExp(
         "[A-Za-z0-9'\.\-\s\,]"
