@@ -15,7 +15,7 @@ function ProductCard() {
             <ProductContainer>
                 <ProductPhoto>
                     <Image 
-                    style= {{width: '70%', height: '25vh'}}
+                    style= {{width: '70%', height: '200px'}}
                     source={{
                         uri: 'https://i.picsum.photos/id/142/200/300.jpg?hmac=B08HyXonHhJPFpULUNgMfoCFGZqymUB3NhBxo3iWTnc',
                       }} />
