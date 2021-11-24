@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, Text, StyleSheet, SafeAreaView, StatusBar, Image, ScrollView, TouchableOpacity,ImageBackground} from 'react-native';
-import COLORS from '../../Colors';
+import COLORS from '../../components/Colors/Colors';
 
 import Icon from 'react-native-vector-icons/Entypo';
 
@@ -17,7 +17,7 @@ export default function Profile() {
           <Text style={styles.title}>Olá, Rafael</Text>
           <Image
             style={styles.profile} 
-            source={require('../../Images/rafael.jpg')}
+            source={require('../../assets/rafael.jpg')}
           />
         </View>
 
@@ -43,19 +43,19 @@ export default function Profile() {
 
           <ScrollView horizontal={true} showsHorizontalScrollIndicator ={false}>
             <TouchableOpacity style={styles.pedidosEach}>
-              <Image source={require('../../Images/boardprod.png')}/>
+              <Image source={require('../../assets/boardprod.png')}/>
             </TouchableOpacity>
 
             <TouchableOpacity style={styles.pedidosEach}>
-              <Image source={require('../../Images/boardprod.png')}/>
+              <Image source={require('../../assets/boardprod.png')}/>
             </TouchableOpacity>
 
             <TouchableOpacity style={styles.pedidosEach}>
-              <Image source={require('../../Images/boardprod.png')}/>
+              <Image source={require('../../assets/boardprod.png')}/>
             </TouchableOpacity>
             
             <TouchableOpacity style={styles.pedidosEach}>
-              <Image source={require('../../Images/boardprod.png')}/>
+              <Image source={require('../../assets/boardprod.png')}/>
             </TouchableOpacity>
           </ScrollView>
         </View>
@@ -67,17 +67,17 @@ export default function Profile() {
 
             <View style={styles.favoritosColumn1}>
                                                             <TouchableOpacity style={styles.favoritosEach}>
-                <Image source={require('../../Images/boardprod.png')} style={styles.photo}/>
+                <Image source={require('../../assets/boardprod.png')} style={styles.photo}/>
                 <Text style={styles.favoritoText}>Escape Room: Board Game</Text>
 
               </TouchableOpacity>
                                                             <TouchableOpacity style={styles.favoritosEach}>
-                <Image source={require('../../Images/boardprod.png')} style={styles.photo}/>
+                <Image source={require('../../assets/boardprod.png')} style={styles.photo}/>
                 <Text style={styles.favoritoText}>Escape Room: Board Game</Text>
 
               </TouchableOpacity>
                                                             <TouchableOpacity style={styles.favoritosEach}>
-                <Image source={require('../../Images/boardprod.png')} style={styles.photo}/>
+                <Image source={require('../../assets/boardprod.png')} style={styles.photo}/>
                 <Text style={styles.favoritoText}>Escape Room: Board Game</Text>
               </TouchableOpacity>
             </View>
@@ -85,17 +85,17 @@ export default function Profile() {
 
             <View>
                                                             <TouchableOpacity style={styles.favoritosEach}>
-                <Image source={require('../../Images/boardprod.png')} style={styles.photo}/>
+                <Image source={require('../../assets/boardprod.png')} style={styles.photo}/>
                 <Text style={styles.favoritoText}>Escape Room: Board Game</Text>
 
               </TouchableOpacity>
                                                             <TouchableOpacity style={styles.favoritosEach}>
-                <Image source={require('../../Images/boardprod.png')} style={styles.photo}/>
+                <Image source={require('../../assets/boardprod.png')} style={styles.photo}/>
                 <Text style={styles.favoritoText}>Escape Room: Board Game</Text>
 
               </TouchableOpacity>
                                                             <TouchableOpacity style={styles.favoritosEach}>
-                <Image source={require('../../Images/boardprod.png')} style={styles.photo}/>
+                <Image source={require('../../assets/boardprod.png')} style={styles.photo}/>
                 <Text style={styles.favoritoText}>Escape Room: Board Game</Text>
 
               </TouchableOpacity>

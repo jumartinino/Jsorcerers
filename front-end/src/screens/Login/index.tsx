@@ -22,7 +22,7 @@ export default function Login() {
     <ScrollView>
 
            <View style={styles.header}>
-            <Image style={styles.image} source={require('../../Images/LogoLogin.png')}/>
+            <Image style={styles.image} source={require('../../assets/LogoLogin.png')}/>
            </View>
 
       <View style={styles.block}>
@@ -89,20 +89,20 @@ export default function Login() {
 
                   
           </View>
-          <TouchableOpacity>
-            <View style={styles.button} 
-              onPress={() => navigation.navigate('Register')}>
+          <TouchableOpacity 
+            //onPress={() => navigation.navigate('Register')}
+          >
+            <View style={styles.button}>
               <Text style={styles.buttonTitle }>Entrar</ Text>
             </View>
           </TouchableOpacity>
 
           <View style={styles.createAccount}>
-            <Text 
-              style={styles.btnRegister}>Não tem uma conta?
-            </Text>
-            <TouchableOpacity 
-              style={styles.btnRegister} 
-              onPress={() => navigation.navigate('Register')}>
+            <Text style={styles.btnRegister}> Não tem uma conta? </Text>
+            <TouchableOpacity
+              // style={styles.btnRegister} 
+              //</View>onPress={() => navigation.navigate('Register')}
+            >
               <Text 
                 style={styles.btnRegisterText}> Crie aqui.
               </Text>

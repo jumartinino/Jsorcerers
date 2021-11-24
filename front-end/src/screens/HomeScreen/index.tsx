@@ -1,4 +1,5 @@
-import React = require('react');
+// import React = require('react');
+import React from 'react';
 import {View, Text, TextInput, StyleSheet, SafeAreaView, StatusBar, Image, ScrollView, TouchableOpacity,ImageBackground} from 'react-native';
 import COLORS from '../../components/Colors/Colors';
 
