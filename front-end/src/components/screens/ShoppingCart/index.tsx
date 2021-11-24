@@ -2,23 +2,28 @@ import React from 'react';
 import {View,Text,FlatList,Button,SafeAreaView,processColor,StyleSheet,TouchableOpacity,StatusBar, ScrollView} from 'react-native';
 import COLORS from '../../Colors'
 
-const ListItem = ({ item, onSubtract, onAdd }) => (
+
+const ListItem = ({ item,onSubtract,onAdd }) => (
   <View style={styles.bigContainer}>
     <View style={styles.container}>
       <View style={styles.titulo}>
-        <Text style={styles.name
-    } >{item.name} - </Text>
-        <Text style={styles.price}>R$ {item.price}</Text>
+        <Text style={styles.name}>
+        {item.name} - 
+        </Text>
+        <Text style={styles.price}>R$                     {item.price}
+        </Text>
       </View>
 
       <View>
-        <Text style={styles.description}>{item.description}</Text>
+        <Text style={styles.description}>                 {item.description}
+        </Text>
       </View>
 
       <View style={styles.bigButton}>
 
-        <TouchableOpacity style={styles.button1} onPress={onSubtract}> <Text> - </Text></TouchableOpacity>
-                <Text style={styles.quantity} > {item.quantity} </Text>
+        <TouchableOpacity style={styles.button1} onPress={onSubtract}> 
+        <Text> - </Text>                   </TouchableOpacity>
+                <Text style={styles.quantity}> {item.quantity} </Text>
         <TouchableOpacity style={styles.button2} onPress={onAdd}> <Text> + </Text></TouchableOpacity>
       </View>
 
@@ -76,8 +81,7 @@ const styles=StyleSheet.create ({
     marginBottom:15,
   },
   quantity:{
-    marginBottom:5,
-
+    marginBottom:5
   },
   description:{
   marginLeft:5
@@ -85,7 +89,7 @@ const styles=StyleSheet.create ({
   header:{
     backgroundColor: COLORS.lightGreen,
     paddingVertical:5,
-
+    marginTop:30
   },
   headerTitle:{
     fontSize:30,
@@ -106,13 +110,14 @@ const Cart = () => {
     { _id: 6, name: 'Item 6', price: 97, quantity: 0, description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore' },
   ]);
 
-  const onSubtract = (item, index) => {
+
+  const onSubtract = (item:any, index:any) => {
     const nextProducts = [...products];
     nextProducts[index].quantity -= 1;
     setProducts(nextProducts);
   };
 
-  const onAdd = (item, index) => {
+  const onAdd = (item:any, index:any) => {
     const nextProducts = [...products];
     nextProducts[index].quantity += 1;
     setProducts(nextProducts);
