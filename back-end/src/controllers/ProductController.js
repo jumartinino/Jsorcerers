@@ -94,4 +94,6 @@ module.exports = {
     create,
     update,
     destroy,
+    addProductPhoto,
+    removeProductPhoto
 };

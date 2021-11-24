@@ -4,9 +4,7 @@ const validationUser = (method) =>{
     switch(method){
         case 'create': {
             return [
-                body('profile_pic')
-                    .exists().withMessage("Não há foto carregada"),
-
+                
                 body('name')
                     .exists().withMessage("O campo não pode estar vazio")
                     .isLength({min: 3}).withMessage('O campo deve ter, no mínimo, 3 caracteres'),
@@ -24,11 +22,7 @@ const validationUser = (method) =>{
 
                 body('data_nasc')
                     .exists().withMessage("O campo não pode estar vazio")
-                    .isDate().withMessage('Data precisa estar no formato: AAAA/MM/DD'),
-
-                body('is_mod')
-                    .exists().withMessage("O campo não pode estar vazio")
-                    .isBoolean.withMessage("O campo só aceita 'true' ou 'false' ")
+                    .isDate().withMessage('Data precisa estar no formato: AAAA/MM/DD')
                 
             ]
         }
@@ -39,9 +33,7 @@ const validationUser_Shop = (method) =>{
     switch(method){
         case 'create': {
             return [
-                body('profile_pic')
-                    .exists().withMessage("Não há foto carregada"),
-
+                
                 body('name')
                     .exists().withMessage("O campo não pode estar vazio")
                     .isLength({min: 3}).withMessage('O campo deve ter, no mínimo, 3 caracteres')
@@ -67,9 +59,7 @@ const validationProduct = (method) =>{
     switch(method){
         case 'create': {
             return [
-                body('photo')
-                    .exists().withMessage("Não há foto carregada"),
-
+                
                 body('name')
                     .exists().withMessage("O campo não pode estar vazio")
                     .isLength({min: 3}).withMessage('O campo deve ter, no mínimo, 3 caracteres'),
@@ -97,7 +87,7 @@ const validationPost = (method) =>{
 
                 body('avaliable_qtt')
                     .exists().withMessage("O campo não pode estar vazio")
-                    .isNumeric.withMessage("O valor não é numérico")
+                    .isNumeric().withMessage("O valor não é numérico")
                 
             ]
         }
@@ -125,7 +115,7 @@ const validationCart = (method) =>{
 
                 body('item_qtt')
                     .exists().withMessage("O campo não pode estar vazio")
-                    .isNumeric.withMessage("O valor não é numérico")
+                    .isNumeric().withMessage("O valor não é numérico")
                 
             ]
         }

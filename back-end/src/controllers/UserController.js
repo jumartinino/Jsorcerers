@@ -16,7 +16,7 @@ const create = async(req,res) => {
 			salt: salt,
 			endereco: req.body.endereco,
 			data_nasc: req.body.data_nasc,
-            is_mod: req.body.is_mod
+            is_mod: false
 			
 		}
 		const user = await User.create(newUserData);
