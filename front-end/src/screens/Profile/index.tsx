@@ -1,13 +1,15 @@
 import React from 'react';
 import {View, Text, StyleSheet, SafeAreaView, StatusBar, Image, ScrollView, TouchableOpacity,ImageBackground} from 'react-native';
 import COLORS from '../../components/Colors/Colors';
+import api from "../../services/api";
+import { useNavigation } from '@react-navigation/native';
 
 import Icon from 'react-native-vector-icons/Entypo';
 
 Icon.loadFont();
 
 export default function Profile() {
-
+  const navigation = useNavigation();
   return(
     <SafeAreaView style={{ flex: 1 }}>
         <ScrollView>
@@ -110,9 +112,17 @@ export default function Profile() {
             </View>
           </View>
           
-              <TouchableOpacity>
+              <TouchableOpacity onPress={() => {
+                
+                    api.post('/logout').then(response => {
+                    alert('Logout feito com sucesso!');
+                    navigation.navigate('login')
+                },
+                    (error) => { console.log("Erro no Logout") })
+            }
+          }>
                 <View style={styles.button}>
-                  <Text style={styles.buttonTitle }>Crie a sua loja</ Text>
+                  <Text style={styles.buttonTitle }>Logout</ Text>
                 </View>
               </TouchableOpacity>
   
