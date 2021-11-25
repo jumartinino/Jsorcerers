@@ -20,106 +20,100 @@ const HomeScreen=()=> {
 
         <View style={styles.header}>
           <Image
-            style={styles.profile} 
-            source={require('../../assets/rafael.jpg')}
+            style={styles.profile}
+            source={require('jsorcerers\front-end\src\assets\pedro 1.png')}
           />
         </View>
-          <View style={styles.searchContainer}>
-            <Icon name='search' size={30} color={COLORS.darkBrown}/>
-            <TextInput style={styles.input} placeholder='Pesquisar na GG'/>
+        <View style={styles.searchContainer}>
+          <Icon name='search' size={30} color={COLORS.darkBrown} />
+          <TextInput style={styles.input} placeholder='Pesquisar na GG' />
+        </View>
+
+
+        <View>
+          <Text style={styles.categTitle}>Categorias</Text>
+          <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
+
+            <View style={styles.categoriesPhotos}>
+              <TouchableOpacity>
+                <ImageBackground style={styles.eachPhoto} source={require('jsorcerers\front-end\src\assets\mangaDef.jpg')}>
+                  <View style={styles.textView}>
+                    <Text style={styles.photoText}>Mangá</Text>
+                  </View>
+                </ImageBackground>
+              </TouchableOpacity>
+
+              <TouchableOpacity>
+                <ImageBackground style={styles.eachPhoto} source={require('jsorcerers\front-end\src\assets\boardDef.jpg')}>
+                  <View style={styles.textView}>
+                    <Text style={styles.photoText}>Board Game</Text>
+                  </View>
+                </ImageBackground>
+              </TouchableOpacity>
+
+              <TouchableOpacity >
+                <ImageBackground style={styles.eachPhoto} source={require('jsorcerers\front-end\src\assets\actionDef.jpg')}>
+                  <View style={styles.textView}>
+                    <Text style={styles.photoText}>Action Figures</Text>
+                  </View>
+                </ImageBackground>
+              </TouchableOpacity>
+
+              <TouchableOpacity >
+                <ImageBackground style={styles.eachPhoto} source={require('jsorcerers\front-end\src\assets\funkoDef.jpg')}>
+                  <View style={styles.textView}>
+                    <Text style={styles.photoText}>Funko Pop</Text>
+                  </View>
+                </ImageBackground>
+              </TouchableOpacity>
+            </View>
+          </ScrollView>
+
+          <View style={styles.productsHeader}>
+            <Text style={styles.productsTitle}>Produtos</Text>
           </View>
 
 
-          <View>
-              <Text style={styles.categTitle}>Categorias</Text>
-            <ScrollView horizontal={true} showsHorizontalScrollIndicator ={false}>
-
-              <View style={styles.categoriesPhotos}>
-                  <TouchableOpacity onPress={()=> Navigation.navigate('category')}>
-                    <ImageBackground style={styles.eachPhoto} source={require('../../assets/mangaDef.jpg')}>
-                    <View style={styles.textView}>
-                      <Text style={styles.photoText}>Mangá</Text>
-                    </View>
-                    </ImageBackground>
-                  </TouchableOpacity>
-
-                  <TouchableOpacity>
-                    <ImageBackground style={styles.eachPhoto} source={require('../../assets/boardDef.jpg')}>
-                    <View style={styles.textView}>
-                      <Text style={styles.photoText}>Board Game</Text>
-                    </View>
-                    </ImageBackground>
-                  </TouchableOpacity>
-
-                  <TouchableOpacity >
-                    <ImageBackground style={styles.eachPhoto} source={require('../../assets/actionDef.jpg')}>
-                    <View style={styles.textView}>
-                      <Text style={styles.photoText}>Action Figures</Text>
-                    </View>
-                    </ImageBackground>
-                  </TouchableOpacity>
-
-                  <TouchableOpacity >
-                    <ImageBackground style={styles.eachPhoto} source={require('../../assets/funkoDef.jpg')}>
-                    <View style={styles.textView}>
-                      <Text style={styles.photoText}>Funko Pop</Text>
-                    </View>
-                    </ImageBackground>
-                  </TouchableOpacity>
-                </View>
-            </ScrollView>
-
-
-              <View style={styles.productsHeader}>
-                <Text style={styles.productsTitle}>Produtos</Text>
-
-                <TouchableOpacity style={styles.filter}>
-                  <Text>filter</Text>
-                </TouchableOpacity>
+            <TouchableOpacity style={styles.productsEach}>
+              <Image source={require('jsorcerers\front-end\src\assets\boardprod.png')} style={styles.photo} />
+              <View style={styles.productDetails}>
+                <Text style={styles.productText}>Escape Room: Board Game</Text>
+                <Text style={styles.productPrice}>R$99,99</Text>
               </View>
-
-    
-              <View style={styles.productsBigContainer}>
-
-                <View style={styles.productsColumn1}>
-                  <TouchableOpacity style={styles.productsEach}>
-                      <Image source={require('../../assets/boardprod.png')} style={styles.photo}/>
-                      <Text style={styles.productText}>Escape Room: Board Game</Text>
-                      <Text style={styles.productPrice}>R$9999,99</Text>
-                  </TouchableOpacity>
-
-                  <TouchableOpacity style={styles.productsEach}>
-                      <Image source={require('../../assets/boardprod.png')} style={styles.photo}/>
-                      <Text style={styles.productText}>Escape Room: Board Game</Text>
-                      <Text style={styles.productPrice}>R$9999,99</Text>
-                  </TouchableOpacity>
-
-                  <TouchableOpacity style={styles.productsEach}>
-                      <Image source={require('../../assets/boardprod.png')} style={styles.photo}/>
-                      <Text style={styles.productText}>Escape Room: Board Game</Text>
-                      <Text style={styles.productPrice}>R$9999,99</Text>
-                  </TouchableOpacity>
-                </View>
-
-                <View style={styles.productsColumn2}>
-                  <TouchableOpacity style={styles.productsEach}>
-                      <Image source={require('../../assets/boardprod.png')} style={styles.photo}/>
-                      <Text style={styles.productText}>Escape Room: Board Game</Text>
-                      <Text style={styles.productPrice}>R$9999,99</Text>
-                  </TouchableOpacity>
-
-                  <TouchableOpacity style={styles.productsEach}>
-                      <Image source={require('../../assets/boardprod.png')} style={styles.photo}/>
-                      <Text style={styles.productText}>Escape Room: Board Game</Text>
-                      <Text style={styles.productPrice}>R$9999,99</Text>
-                  </TouchableOpacity>
-
-                  <TouchableOpacity style={styles.productsEach}>
-                      <Image source={require('../../assets/boardprod.png')} style={styles.photo}/>
-                      <Text style={styles.productText}>Escape Room: Board Game</Text>
-                      <Text style={styles.productPrice}>R$9999,99</Text>
-                  </TouchableOpacity>
-                </View>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.productsEach}>
+              <Image source={require('jsorcerers\front-end\src\assets\masterboard.jpg')} style={styles.photo} />
+              <View style={styles.productDetails}>
+                <Text style={styles.productText}>Grow Master </Text>
+                <Text style={styles.productPrice}>R$74,99</Text>
+              </View>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.productsEach}>
+              <Image source={require('jsorcerers\front-end\src\assets\zodiaco.jpg')} style={styles.photo} />
+              <View style={styles.productDetails}>
+                <Text style={styles.productText}>Cavaleiros do Zodíaco – Saint Seiya</Text>
+                <Text style={styles.productPrice}>R$34,99</Text>
+              </View>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.productsEach}>
+              <Image source={require('jsorcerers\front-end\src\assets\fairyfunko.jpg')} style={styles.photo} />
+              <View style={styles.productDetails}>
+                <Text style={styles.productText}>FUNKO POP! ANIME: Fairy Tail W2 </Text>
+                <Text style={styles.productPrice}>R$266,99</Text>
+              </View>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.productsEach}>
+              <Image source={require('jsorcerers\front-end\src\assets\yodaaction.jpg')} style={styles.photo} />
+              <View style={styles.productDetails}>
+                <Text style={styles.productText}>Star Wars (Baby Yoda)</Text>
+                <Text style={styles.productPrice}>R$103,99</Text>
+              </View>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.productsEach}>
+              <Image source={require('jsorcerers\front-end\src\assets\scotlandboard.jpg')} style={styles.photo} />
+              <View style={styles.productDetails}>
+                <Text style={styles.productText}>Scotland Yard Maquina do Tempo </Text>
+                <Text style={styles.productPrice}>R$84,99</Text>
               </View>
 
           </View>
@@ -165,77 +159,49 @@ const styles = StyleSheet.create({
 },
 categoriesPhotos:{
     flexDirection: 'row',
-    flex:1,
-    marginVertical:5,
-    marginHorizontal:10,    
+    flexWrap: 'wrap',
+    justifyContent: 'space-evenly'
   },
-eachPhoto:{
-  width:170,
-  height: 100,
-  marginHorizontal:5,
- },
-textView:{
-  position:'absolute',
-  justifyContent: 'center',
-  alignItems: 'center',
-  top: 0,
-  left: 0,
-  right: 0,
-  bottom: 0,
-},
-  photoText:{
-  fontSize: 20,
-  color: 'white',
-  fontWeight: 'bold',
- },
- productsBigContainer:{
-  flexDirection: 'row',
-},
- productsHeader:{
-  flexDirection: 'row',
-  justifyContent: 'space-between',
-  marginBottom:0,
-  marginTop:10
-},
-filter:{
-  marginRight:25
-},
- productsTitle:{
-  color: COLORS.darkBrown, 
-  fontSize: 20,
-  fontWeight:'bold',
-  marginLeft: 24,
- },
-productsEach:{
-  borderRadius:10,
-  backgroundColor:COLORS.lightGreen,
-  paddingVertical:2,
-  alignItems:'center',
-  width:180,
-  height: 200,
-  marginTop:10
-},
-photo:{
-  width:120,
-  height: 120,
-  backgroundColor:COLORS.lightGreen,
-  marginTop:15
-},
-productsColumn1:{ 
-  marginLeft:10,
-  marginRight:10,
-},
-productsColumn2:{
-  marginRight:10,
-},
-productText:{
-  marginBottom:0,
-  fontSize:15
-},
-productPrice:{
-  fontWeight:'bold',
-  fontSize:15
-}
+  productsHeader: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginBottom: 0,
+    marginTop: 10
+  },
+  productsTitle: {
+    color: COLORS.darkBrown,
+    fontSize: 20,
+    fontWeight: 'bold',
+    marginLeft: 24,
+  },
+  productsEach: {
+    borderRadius: 10,
+    backgroundColor: COLORS.lightGreen,
+    paddingVertical: 2,
+    alignItems: 'center',
+    width: '45%',
+    height: 210,
+    marginTop: 10
+  },
+  photo: {
+    width: 120,
+    height: 120,
+    backgroundColor: COLORS.lightGreen,
+    marginTop: 15
+  },
+  productDetails:{
+    display: 'flex',
+    width: '90%',
+    justifyContent:'flex-start',
+  },
+  productText: {
+    marginBottom: 0,
+    fontSize: 15,
+  },
+  productPrice: {
+    fontWeight: 'bold',
+    fontSize: 15
+  }
 })
 
 export default HomeScreen;
