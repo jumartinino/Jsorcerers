@@ -9,7 +9,7 @@ const Photo = sequelize.define("Photo", {
 });
 
 Photo.associate = function(models){
-	Photo.hasMany(models.Product);
+	Photo.hasOne(models.Product);
     Photo.hasOne(models.User);
     Photo.hasOne(models.User_Shop);
 }
