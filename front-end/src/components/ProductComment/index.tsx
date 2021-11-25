@@ -7,13 +7,13 @@ import {
 } from "./styles";
 
 
-export default function ProductCommentaty(){
+export default function ProductCommentaty({name, question, answer}){
     return(
         <CommentaryDiv>
             <DivisionBar/>
-            <CommentarySections>Nome: blablablabla</CommentarySections>
-            <CommentarySections>Pergunta: eu posso fritar ovo na minha tekpix??</CommentarySections>
-            <CommentarySections>Resposta: Sim, você pode fritar ovo na sua tekpix</CommentarySections>
+            <CommentarySections>Nome: {name}</CommentarySections>
+            <CommentarySections>Pergunta: {question}</CommentarySections>
+            <CommentarySections>Resposta: {answer}</CommentarySections>
         </CommentaryDiv>
     )
 }

@@ -31,7 +31,7 @@ export default function Products(){
         <View style={{flex: 1, alignItems: "center"}}>
             <Product>
                 <Image
-                    source={{uri: 'https://reactjs.org/logo-og.png'}}
+                    source={require('../../assets/Jujutsu.png')}
                     style={{ width: '100%', height: 300 }}
                 />
                 <ProductTitle> Jujutsu Kaisen - Batalha de Feiticeiros - 10</ProductTitle>
@@ -49,9 +49,9 @@ export default function Products(){
             </FavoritsNCommentariesDiv>
 
             <StoreDiv>
-                <StoreProfilePic source={{uri: 'https://reactjs.org/logo-og.png'}}/>
+                <StoreProfilePic source={require('../../assets/Rafael.png')}/>
                 <StoreNameNRating>
-                    <StoreName>Name</StoreName>
+                    <StoreName>Rafael</StoreName>
                     <StoreRating>4*</StoreRating>
                 </StoreNameNRating>
                 <StoreButton>Ver Loja</StoreButton>
@@ -63,8 +63,8 @@ export default function Products(){
                 <ProductComment comentario={data}/>
             }} */}
 
-            <ProductComment/>
-            <ProductComment/>
+            <ProductComment name={'Rodrigo'} question={'Ele está lacrado?'} answer={'Sim, ele é novo'}/>
+            <ProductComment name={'Gustavo'} question={'Pode vender 5 de uma vez só?'} answer={'Não, só uma por compra'} />
             
             <SeeMore>Ver mais</SeeMore>
 
@@ -76,8 +76,8 @@ export default function Products(){
                 <ProductReviews comentario={data}/>
             }} */}
 
-            <ProductReviews/>
-            <ProductReviews/>
+            <ProductReviews name={'CARLOS'} commentary={'Excelente'} />
+            <ProductReviews name={'LUCAS'} commentary={'Muito bom'} />
 
             <SeeMore>Ver mais</SeeMore>
 
