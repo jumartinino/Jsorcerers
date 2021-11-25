@@ -14,12 +14,19 @@ import {
     RegisterButtonText,
 } from './styles.tsx';
 
+import api from "../../services/api";
+
 export default function Login() {
 
     const { control, handleSubmit, formState: { errors }, getValues } = useForm({ mode: 'onTouched' });
 
     const onSubmit = (data: FormData) => {
         console.log(data);
+        api.post('api/register', data).then(response => {
+            alert('Cadastro feito com sucesso!')
+            navigation.navigate('Login')
+        },
+        (error => ('Cadastro não pode ser concluído')))      
     }
 
     const validAddress = new RegExp(
