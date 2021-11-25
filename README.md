@@ -5,8 +5,6 @@ pop tem a opotunidade de achar aquilo que procura.
  
 **Status do Projeto** : Em desenvolvimento
 
-*Deixe um ou dois badges com as frameworks ou linguagens utilizadas*
-
 ![Badge](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![Badge](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![Badge](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
@@ -17,15 +15,12 @@ pop tem a opotunidade de achar aquilo que procura.
  
 ## Tabela de Conteúdo
 
-*Faça um índice com links internos para todos os tópicos seguintes.*
-
  1. [Tecnologias utilizadas](#tecnologias-utilizadas)
  2. [Instalação](#instalação)
  3. [Configuração](#configuração)
  4. [Uso](#uso)
- 5. [Testes](#testes)
- 6. [Arquitetura](#arquitetura)
- 7. [Autores](#autores)
+ 5. [Arquitetura](#arquitetura)
+ 6. [Autores](#autores)
  
 ## Tecnologias utilizadas
 
@@ -62,6 +57,8 @@ Sendo feita a instalção com sucesso, rode, na pasta back-end:
 
 ``` bash
 $ cp .env.example .env
+$ npm run migrate
+$ npm run keys
 ```
  
 ## Uso
@@ -81,15 +78,6 @@ execute:
 $ expo run
 ```
 
-## Testes
-
-*Se o projeto possuir testes, coloque aqui o passo a passo para rodá-los. Seja o mais claro e sucinto possível.*
-
-*Caso precise rodar um comando no terminal, utilize a seguinte notação:*
-
-``` bash
-$ Digite seu comando aqui
-```
 ## Arquitetura
 
 - [Documentações sobre a concepção do projeto e design thinking](https://miro.com/app/board/o9J_lj2Xml0=/)
