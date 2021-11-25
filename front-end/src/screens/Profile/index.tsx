@@ -9,7 +9,7 @@ Icon.loadFont();
 export default function Profile() {
 
   return(
-    <SafeAreaView>
+    <SafeAreaView style={{ flex: 1 }}>
         <StatusBar barStyle = "dark-content" hidden = {false} backgroundColor = "white" translucent = {true}/>
         <ScrollView>
   
@@ -25,7 +25,7 @@ export default function Profile() {
   
             <View style={styles.editHeader}>
             <Text style={styles.containersTitle}>Meus dados:</Text>
-            <TouchableOpacity onPress={this.goToEdit}>
+            <TouchableOpacity /*onPress={this.goToEdit}*/>
             <Icon name='pencil' style={styles.icon} />
             </TouchableOpacity>
             </View>

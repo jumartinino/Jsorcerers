@@ -1,5 +1,6 @@
 import React from 'react';
 import { Image } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 import {
     ProductDiv,
     ProductContainer,
@@ -12,8 +13,9 @@ import {
 } from './styles';
 
 function ProductCard({ title, rating, price, description}) {
+    const navigation = useNavigation();
     return (
-        <ProductDiv>
+        <ProductDiv onPress={()=> navigation.navigate('products')}>
             <ProductContainer>
                 <ProductPhoto>
                     <Image
