@@ -18,7 +18,7 @@ const HomeScreen = () => {
         <View style={styles.header}>
           <Image
             style={styles.profile}
-            source={require('../../assets/rafael.jpg')}
+            source={require('jsorcerers\front-end\src\assets\pedro 1.png')}
           />
         </View>
         <View style={styles.searchContainer}>
@@ -33,7 +33,7 @@ const HomeScreen = () => {
 
             <View style={styles.categoriesPhotos}>
               <TouchableOpacity>
-                <ImageBackground style={styles.eachPhoto} source={require('../../assets/mangaDef.jpg')}>
+                <ImageBackground style={styles.eachPhoto} source={require('jsorcerers\front-end\src\assets\mangaDef.jpg')}>
                   <View style={styles.textView}>
                     <Text style={styles.photoText}>Mangá</Text>
                   </View>
@@ -41,7 +41,7 @@ const HomeScreen = () => {
               </TouchableOpacity>
 
               <TouchableOpacity>
-                <ImageBackground style={styles.eachPhoto} source={require('../../assets/boardDef.jpg')}>
+                <ImageBackground style={styles.eachPhoto} source={require('jsorcerers\front-end\src\assets\boardDef.jpg')}>
                   <View style={styles.textView}>
                     <Text style={styles.photoText}>Board Game</Text>
                   </View>
@@ -49,7 +49,7 @@ const HomeScreen = () => {
               </TouchableOpacity>
 
               <TouchableOpacity >
-                <ImageBackground style={styles.eachPhoto} source={require('../../assets/actionDef.jpg')}>
+                <ImageBackground style={styles.eachPhoto} source={require('jsorcerers\front-end\src\assets\actionDef.jpg')}>
                   <View style={styles.textView}>
                     <Text style={styles.photoText}>Action Figures</Text>
                   </View>
@@ -57,7 +57,7 @@ const HomeScreen = () => {
               </TouchableOpacity>
 
               <TouchableOpacity >
-                <ImageBackground style={styles.eachPhoto} source={require('../../assets/funkoDef.jpg')}>
+                <ImageBackground style={styles.eachPhoto} source={require('jsorcerers\front-end\src\assets\funkoDef.jpg')}>
                   <View style={styles.textView}>
                     <Text style={styles.photoText}>Funko Pop</Text>
                   </View>
@@ -73,45 +73,45 @@ const HomeScreen = () => {
           <View style={styles.productsBigContainer}>
 
             <TouchableOpacity style={styles.productsEach}>
-              <Image source={require('../../assets/boardprod.png')} style={styles.photo} />
+              <Image source={require('jsorcerers\front-end\src\assets\boardprod.png')} style={styles.photo} />
               <View style={styles.productDetails}>
                 <Text style={styles.productText}>Escape Room: Board Game</Text>
-                <Text style={styles.productPrice}>R$9999,99</Text>
+                <Text style={styles.productPrice}>R$99,99</Text>
               </View>
             </TouchableOpacity>
             <TouchableOpacity style={styles.productsEach}>
-              <Image source={require('../../assets/boardprod.png')} style={styles.photo} />
+              <Image source={require('jsorcerers\front-end\src\assets\masterboard.jpg')} style={styles.photo} />
               <View style={styles.productDetails}>
-                <Text style={styles.productText}>Escape Room: Board Game</Text>
-                <Text style={styles.productPrice}>R$9999,99</Text>
+                <Text style={styles.productText}>Grow Master </Text>
+                <Text style={styles.productPrice}>R$74,99</Text>
               </View>
             </TouchableOpacity>
             <TouchableOpacity style={styles.productsEach}>
-              <Image source={require('../../assets/boardprod.png')} style={styles.photo} />
+              <Image source={require('jsorcerers\front-end\src\assets\zodiaco.jpg')} style={styles.photo} />
               <View style={styles.productDetails}>
-                <Text style={styles.productText}>Escape Room: Board Game</Text>
-                <Text style={styles.productPrice}>R$9999,99</Text>
+                <Text style={styles.productText}>Cavaleiros do Zodíaco – Saint Seiya</Text>
+                <Text style={styles.productPrice}>R$34,99</Text>
               </View>
             </TouchableOpacity>
             <TouchableOpacity style={styles.productsEach}>
-              <Image source={require('../../assets/boardprod.png')} style={styles.photo} />
+              <Image source={require('jsorcerers\front-end\src\assets\fairyfunko.jpg')} style={styles.photo} />
               <View style={styles.productDetails}>
-                <Text style={styles.productText}>Escape Room: Board Game</Text>
-                <Text style={styles.productPrice}>R$9999,99</Text>
+                <Text style={styles.productText}>FUNKO POP! ANIME: Fairy Tail W2 </Text>
+                <Text style={styles.productPrice}>R$266,99</Text>
               </View>
             </TouchableOpacity>
             <TouchableOpacity style={styles.productsEach}>
-              <Image source={require('../../assets/boardprod.png')} style={styles.photo} />
+              <Image source={require('jsorcerers\front-end\src\assets\yodaaction.jpg')} style={styles.photo} />
               <View style={styles.productDetails}>
-                <Text style={styles.productText}>Escape Room: Board Game</Text>
-                <Text style={styles.productPrice}>R$9999,99</Text>
+                <Text style={styles.productText}>Star Wars (Baby Yoda)</Text>
+                <Text style={styles.productPrice}>R$103,99</Text>
               </View>
             </TouchableOpacity>
             <TouchableOpacity style={styles.productsEach}>
-              <Image source={require('../../assets/boardprod.png')} style={styles.photo} />
+              <Image source={require('jsorcerers\front-end\src\assets\scotlandboard.jpg')} style={styles.photo} />
               <View style={styles.productDetails}>
-                <Text style={styles.productText}>Escape Room: Board Game</Text>
-                <Text style={styles.productPrice}>R$9999,99</Text>
+                <Text style={styles.productText}>Scotland Yard Maquina do Tempo </Text>
+                <Text style={styles.productPrice}>R$84,99</Text>
               </View>
             </TouchableOpacity>
           </View>
@@ -216,13 +216,6 @@ const styles = StyleSheet.create({
     height: 120,
     backgroundColor: COLORS.lightGreen,
     marginTop: 15
-  },
-  productsColumn1: {
-    marginLeft: 10,
-    marginRight: 10,
-  },
-  productsColumn2: {
-    marginRight: 10,
   },
   productDetails:{
     display: 'flex',
