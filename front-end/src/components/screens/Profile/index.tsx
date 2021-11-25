@@ -9,213 +9,229 @@ Icon.loadFont();
 export default function Profile() {
 
   return(
-  <SafeAreaView>
-      <StatusBar barStyle = "dark-content" hidden = {false} backgroundColor = "white" translucent = {true}/>
-      <ScrollView>
-
-        <View style={styles.header}>
-          <Text style={styles.title}>Olá, Rafael</Text>
-          <Image
-            style={styles.profile} 
-            source={require('../../Images/rafael.jpg')}
-          />
-        </View>
-
-        <View style={styles.editContainer}>
-
-          <View style={styles.editHeader}>
-          <Text style={styles.containersTitle}>Meus dados:</Text>
-          <TouchableOpacity>
-          <Icon name='pencil' style={styles.icon} />
-          </TouchableOpacity>
+    <SafeAreaView>
+        <StatusBar barStyle = "dark-content" hidden = {false} backgroundColor = "white" translucent = {true}/>
+        <ScrollView>
+  
+          <View style={styles.header}>
+            <Text style={styles.title}>Olá, Rafael</Text>
+            <Image
+              style={styles.profile} 
+              source={require('../../components/Images/pedro.png')}
+            />
           </View>
-
-          <View style={styles.dados}>
-            <Text>Nome: Rafael Alves Faria</Text>
-            <Text>Cpf: 123.456.789-10</Text>
-            <Text>Email: Rafael@email.com</Text>
-            <Text>Endereço: Rua das pedras 123, bairro alto</Text>
-          </View>
-        </View>
-
-        <View style={styles.pedidosFavoritosContainer}>
-          <Text style={styles.containersTitle}>Meus pedidos:</Text>
-
-          <ScrollView horizontal={true} showsHorizontalScrollIndicator ={false}>
-            <TouchableOpacity style={styles.pedidosEach}>
-              <Image source={require('../../Images/boardprod.png')}/>
+  
+          <View style={styles.editContainer}>
+  
+            <View style={styles.editHeader}>
+            <Text style={styles.containersTitle}>Meus dados:</Text>
+            <TouchableOpacity onPress={this.goToEdit}>
+            <Icon name='pencil' style={styles.icon} />
             </TouchableOpacity>
-
-            <TouchableOpacity style={styles.pedidosEach}>
-              <Image source={require('../../Images/boardprod.png')}/>
-            </TouchableOpacity>
-
-            <TouchableOpacity style={styles.pedidosEach}>
-              <Image source={require('../../Images/boardprod.png')}/>
-            </TouchableOpacity>
-            
-            <TouchableOpacity style={styles.pedidosEach}>
-              <Image source={require('../../Images/boardprod.png')}/>
-            </TouchableOpacity>
-          </ScrollView>
-        </View>
-
-        <View style={styles.pedidosFavoritosContainer}>
-          <Text style={styles.containersTitle}>Meus favoritos:</Text>
-
-          <View style={styles.favoritosBigContainer}>
-
-            <View style={styles.favoritosColumn1}>
-                                                            <TouchableOpacity style={styles.favoritosEach}>
-                <Image source={require('../../Images/boardprod.png')} style={styles.photo}/>
-                <Text style={styles.favoritoText}>Escape Room: Board Game</Text>
-
-              </TouchableOpacity>
-                                                            <TouchableOpacity style={styles.favoritosEach}>
-                <Image source={require('../../Images/boardprod.png')} style={styles.photo}/>
-                <Text style={styles.favoritoText}>Escape Room: Board Game</Text>
-
-              </TouchableOpacity>
-                                                            <TouchableOpacity style={styles.favoritosEach}>
-                <Image source={require('../../Images/boardprod.png')} style={styles.photo}/>
-                <Text style={styles.favoritoText}>Escape Room: Board Game</Text>
-              </TouchableOpacity>
             </View>
-
-
-            <View>
-                                                            <TouchableOpacity style={styles.favoritosEach}>
-                <Image source={require('../../Images/boardprod.png')} style={styles.photo}/>
-                <Text style={styles.favoritoText}>Escape Room: Board Game</Text>
-
-              </TouchableOpacity>
-                                                            <TouchableOpacity style={styles.favoritosEach}>
-                <Image source={require('../../Images/boardprod.png')} style={styles.photo}/>
-                <Text style={styles.favoritoText}>Escape Room: Board Game</Text>
-
-              </TouchableOpacity>
-                                                            <TouchableOpacity style={styles.favoritosEach}>
-                <Image source={require('../../Images/boardprod.png')} style={styles.photo}/>
-                <Text style={styles.favoritoText}>Escape Room: Board Game</Text>
-
-              </TouchableOpacity>
+  
+            <View style={styles.dados}>
+              <Text>Nome: Rafael Alves Faria</Text>
+              <Text>Cpf: 123.456.789-10</Text>
+              <Text>Email: Rafael@email.com</Text>
+              <Text>Endereço: Rua das pedras 123, bairro alto</Text>
             </View>
           </View>
-        </View>
-        
-            <TouchableOpacity>
-              <View style={styles.button}>
-                <Text style={styles.buttonTitle }>Crie a sua loja</ Text>
+  
+          <View style={styles.pedidosFavoritosContainer}>
+            <Text style={styles.containersTitle}>Meus pedidos:</Text>
+  
+            <ScrollView horizontal={true} showsHorizontalScrollIndicator ={false}>
+              <TouchableOpacity style={styles.pedidosEach}>
+                <Image source={require('jsorcerers\front-end\src\components\Images\scotlandboard.jpg')} style={styles.image}/>
+              </TouchableOpacity>
+  
+              <TouchableOpacity style={styles.pedidosEach}>
+                <Image source={require('jsorcerers\front-end\src\components\Images\boardprod.png')} style={styles.image} />
+              </TouchableOpacity>
+  
+              <TouchableOpacity style={styles.pedidosEach}>
+                <Image source={require('../../components/Images/oneaction.jpg')} style={styles.image}/>
+              </TouchableOpacity>
+              
+              <TouchableOpacity style={styles.pedidosEach}>
+                <Image source={require('jsorcerers\front-end\src\components\Images\zodiaco.jpg')} style={styles.image}/>
+              </TouchableOpacity>
+  
+              <TouchableOpacity style={styles.pedidosEach}>
+                <Image source={require('jsorcerers\front-end\src\components\Images\abyss.jpg')} style={styles.image}/>
+              </TouchableOpacity>
+  
+              <TouchableOpacity style={styles.pedidosEach}>
+                <Image source={require('jsorcerers\front-end\src\components\Images\scotlandboard.jpg')} style={styles.image}/>
+              </TouchableOpacity>
+              
+              <TouchableOpacity style={styles.pedidosEach}>
+                <Image source={require('jsorcerers\front-end\src\components\Images\funko.jpg')} style={styles.image}/>
+              </TouchableOpacity>
+            </ScrollView>
+          </View>
+  
+          <View style={styles.pedidosFavoritosContainer}>
+            <Text style={styles.containersTitle}>Meus favoritos:</Text>
+  
+            <View style={styles.favoritosBigContainer}>
+  
+              <View style={styles.favoritosColumn1}>
+                                                              <TouchableOpacity style={styles.favoritosEach}>
+                  <Image source={require('jsorcerers\front-end\src\components\Images\jutsuu.jpg')} style={styles.photo}/>
+                  <Text style={styles.favoritoText}>Jujutsu Kaisen</Text>
+  
+                </TouchableOpacity>
+                                                              <TouchableOpacity style={styles.favoritosEach}>
+                  <Image source={require('jsorcerers\front-end\src\components\Images\fairyfunko.jpg')} style={styles.photo}/>
+                  <Text style={styles.favoritoText}>Fairy Tale</Text>
+  
+                </TouchableOpacity>
+                                                              <TouchableOpacity style={styles.favoritosEach}>
+                  <Image source={require('jsorcerers\front-end\src\components\Images\masterboard.jpg')} style={styles.photo}/>
+                  <Text style={styles.favoritoText}>Master Board</Text>
+                </TouchableOpacity>
               </View>
-            </TouchableOpacity>
-
-      </ScrollView>
-  </SafeAreaView>
-  )
-}
-
-const styles= StyleSheet.create({
-  header:{
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    paddingVertical: 15,
-    paddingHorizontal:25,
-    marginTop:30,
-  },
-  title:{
-    marginTop:18,
-    fontSize:20,
-    fontWeight:'bold',
-    color:COLORS.darkBrown,
-  },
-  profile:{
-    height:70,
-    width:70,
-    borderRadius:35,
-  },
-  editContainer:{
-    paddingVertical: 15,
-    paddingHorizontal:10,
-    backgroundColor:COLORS.lightGreen,
-    width:'90%',
-    alignSelf:'center',
-    borderRadius:10,
-  },
-  editHeader:{
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    },
-  containersTitle:{
-    fontSize:18,
-    fontWeight:'bold',
-    color:COLORS.darkBrown
-  },
-  icon:{
-    color:COLORS.darkBrown,
-    fontSize:30,
-  },
-  dados:{
-    marginLeft:10,
-
-  },
-  pedidosFavoritosContainer:{
-    paddingVertical: 15,
-    paddingHorizontal:10,
-    width:'90%',
-    alignSelf:'center',
-    borderRadius:10,
-    borderColor:COLORS.darkGreen,
-    borderWidth:2,
-    marginTop:20
-  },
-  pedidosEach:{
-    paddingVertical: 10,
-    paddingHorizontal: 10,
-    backgroundColor:COLORS.lightGreen,
-    marginLeft:10,
-    marginTop:10,
-    borderRadius:10,
-  },
-  favoritosBigContainer:{
-    flexDirection: 'row',
-  },
-  favoritosColumn1:{
-    marginRight:10,
-    marginLeft:10,
-    
-  },
-  favoritosEach:{
-    borderRadius:10,
-    backgroundColor:COLORS.lightGreen,
-    paddingVertical:2,
-    alignItems:'center',
-    width:150,
-    height: 180,
-    marginTop:10,
-  },
-  photo:{
-  width:110,
-  height: 110,
-  backgroundColor:COLORS.lightGreen,
-  marginTop:15
-  },
-  favoritoText:{
-    fontSize:18
-  },
-  button:{
-    height: 40,
-    width: "90%",
-    backgroundColor: COLORS.lightGreen,
-    marginBottom: 10,
-    marginTop: 50,
-    borderRadius: 7,
-    alignSelf:'center'
-  },
-  buttonTitle:{
-    textAlign: 'center',
-    marginTop: 5,
-    color: COLORS.darkBrown,
-    fontSize: 20,
-    fontWeight:'bold'
+  
+  
+              <View>
+                                                              <TouchableOpacity style={styles.favoritosEach}>
+                  <Image source={require('jsorcerers\front-end\src\components\Images\zodiaco.jpg')} style={styles.photo}/>
+                  <Text style={styles.favoritoText}>Cavaleiros do Zodíaco</Text>
+  
+                </TouchableOpacity>
+                                                              <TouchableOpacity style={styles.favoritosEach}>
+                  <Image source={require('jsorcerers\front-end\src\components\Images\yodaaction.jpg')} style={styles.photo}/>
+                  <Text style={styles.favoritoText}>Baby Yoda</Text>
+  
+                </TouchableOpacity>
+                                                              <TouchableOpacity style={styles.favoritosEach}>
+                  <Image source={require('jsorcerers\front-end\src\components\Images\scotlandboard.jpg')} style={styles.photo}/>
+                  <Text style={styles.favoritoText}>Scotland Yard</Text>
+  
+                </TouchableOpacity>
+              </View>
+            </View>
+          </View>
+          
+              <TouchableOpacity>
+                <View style={styles.button}>
+                  <Text style={styles.buttonTitle }>Crie a sua loja</ Text>
+                </View>
+              </TouchableOpacity>
+  
+        </ScrollView>
+    </SafeAreaView>
+    )
   }
-})
+  
+  const styles= StyleSheet.create({
+    header:{
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      paddingVertical: 15,
+      paddingHorizontal:25,
+      marginTop:30,
+    },
+    title:{
+      marginTop:18,
+      fontSize:20,
+      fontWeight:'bold',
+      color:COLORS.darkBrown,
+    },
+    profile:{
+      height:70,
+      width:70,
+      borderRadius:35,
+    },
+    editContainer:{
+      paddingVertical: 15,
+      paddingHorizontal:10,
+      backgroundColor:COLORS.lightGreen,
+      width:'90%',
+      alignSelf:'center',
+      borderRadius:10,
+    },
+    editHeader:{
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      },
+    containersTitle:{
+      fontSize:18,
+      fontWeight:'bold',
+      color:COLORS.darkBrown
+    },
+    icon:{
+      color:COLORS.darkBrown,
+      fontSize:30,
+    },
+    dados:{
+      marginLeft:10,
+  
+    },
+    pedidosFavoritosContainer:{
+      paddingVertical: 15,
+      paddingHorizontal:10,
+      width:'90%',
+      alignSelf:'center',
+      borderRadius:10,
+      borderColor:COLORS.darkGreen,
+      borderWidth:2,
+      marginTop:20
+    },
+    pedidosEach:{
+      paddingVertical: 10,
+      paddingHorizontal: 10,
+      backgroundColor:COLORS.lightGreen,
+      marginLeft:10,
+      marginTop:10,
+      borderRadius:10,
+    },
+    favoritosBigContainer:{
+      flexDirection: 'row',
+    },
+    favoritosColumn1:{
+      marginRight:10,
+      marginLeft:10,
+      
+    },
+    favoritosEach:{
+      borderRadius:10,
+      backgroundColor:COLORS.lightGreen,
+      paddingVertical:2,
+      alignItems:'center',
+      width:150,
+      height: 180,
+      marginTop:10,
+    },
+    photo:{
+    width:120,
+    height: 100,
+    backgroundColor:COLORS.lightGreen,
+    marginTop:15
+    },
+    image:{
+    width:75,
+    height: 75,
+    },
+    favoritoText:{
+      fontSize:18
+    },
+    button:{
+      height: 40,
+      width: "90%",
+      backgroundColor: COLORS.lightGreen,
+      marginBottom: 10,
+      marginTop: 50,
+      borderRadius: 7,
+      alignSelf:'center'
+    },
+    buttonTitle:{
+      textAlign: 'center',
+      marginTop: 5,
+      color: COLORS.darkBrown,
+      fontSize: 20,
+      fontWeight:'bold'
+    }
+  })
