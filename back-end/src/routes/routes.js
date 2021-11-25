@@ -19,6 +19,8 @@ router.use("/private", passport.authenticate('jwt', {session: false}));
 router.get('/private/getDetails', AuthController.getDetails);
 router.post('/login', AuthController.login);
 
+router.post('/logout', AuthController.logout);
+
 router.get('/buys',BuyingController.index);
 router.get('/buys/:id',BuyingController.show);
 router.post('/buys', validator.validationBuying('create'), BuyingController.create);
