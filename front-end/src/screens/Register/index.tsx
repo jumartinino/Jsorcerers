@@ -2,6 +2,7 @@ import React from "react";
 import { Image, Text } from "react-native";
 import { useForm, Controller } from 'react-hook-form';
 import { TextInputMask } from 'react-native-masked-text';
+import { useNavigation } from '@react-navigation/native';
 
 import {
     PageDiv,
@@ -12,14 +13,34 @@ import {
     SectionTitles,
     RegisterButton,
     RegisterButtonText,
-} from './styles.tsx';
+} from './styles';
+
+import api from "../../services/api";
 
 export default function Login() {
 
     const { control, handleSubmit, formState: { errors }, getValues } = useForm({ mode: 'onTouched' });
+    const navigation = useNavigation();
 
     const onSubmit = (data: FormData) => {
         console.log(data);
+        data.data_nasc = data.data_nasc.replaceAll('/','-');
+
+        function FormataStringData(data) {
+            var dia  = data.split("-")[0];
+            var mes  = data.split("-")[1];
+            var ano  = data.split("-")[2];
+          
+            return ano + '-' + ("0"+mes).slice(-2) + '-' + ("0"+dia).slice(-2);
+        }
+
+        data.data_nasc = FormataStringData(data.data_nasc);
+
+        api.post('/users', data).then(response => {
+            alert('Cadastro feito com sucesso!');
+            navigation.navigate('login')
+        },
+        (error) => {console.log(data.data_nasc)})
     }
 
     const validAddress = new RegExp(
@@ -27,11 +48,12 @@ export default function Login() {
      );
 
     interface FormData {
-        name: string;
+        nome: string;
         email: string;
         password: string;
         confirmPassword: string;
-        birthDate: string;
+        data_nasc: string;
+        endereco: string;
     }
 
     return (
@@ -86,10 +108,10 @@ export default function Login() {
                                 message: 'Endereço inválido.'
                             }
                         }}
-                        name='address'
+                        name='endereco'
                         defaultValue=''
                     />
-                    {errors.address && <Text style={{ color: 'red' }}>{errors.address.message}</Text>}
+                    {errors.endereco && <Text style={{ color: 'red' }}>{errors.endereco.message}</Text>}
                 </InputDiv>
 
                 {/* Input data de aniversário */}
@@ -118,10 +140,10 @@ export default function Login() {
                         rules={{
                             required: 'A data de nascimento é obrigatória.',
                         }}
-                        name='birthDate'
+                        name='data_nasc'
                         defaultValue=''
                     />
-                    {errors.birthDate && <Text style={{ color: 'red' }}>{errors.birthDate.message}</Text>}
+                    {errors.data_nasc && <Text style={{ color: 'red' }}>{errors.data_nasc.message}</Text>}
                 </InputDiv>
 
                 <SectionDiv>

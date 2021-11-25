@@ -22,7 +22,7 @@ const validationUser = (method) =>{
 
                 body('data_nasc')
                     .exists().withMessage("O campo não pode estar vazio")
-                    .isDate().withMessage('Data precisa estar no formato: AAAA/MM/DD')
+                    .isDate().withMessage('Data inválida')
                 
             ]
         }
