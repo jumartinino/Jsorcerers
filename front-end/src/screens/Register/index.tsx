@@ -12,7 +12,7 @@ import {
     SectionTitles,
     RegisterButton,
     RegisterButtonText,
-} from './styles.tsx';
+} from './styles';
 
 import api from "../../services/api";
 
