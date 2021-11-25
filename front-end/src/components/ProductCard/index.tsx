@@ -1,30 +1,30 @@
 import React from 'react';
 import { Image } from 'react-native';
-import { ProductDiv, 
-    ProductContainer, 
-    ProductPhoto, 
-    ProductDescriptionDiv, 
-    ProductTitle, 
-    ProductRating, 
-    ProductPrice, 
-    ProductDescription } from './styles';
+import {
+    ProductDiv,
+    ProductContainer,
+    ProductPhoto,
+    ProductDescriptionDiv,
+    ProductTitle,
+    ProductRating,
+    ProductPrice,
+    ProductDescription
+} from './styles';
 
-function ProductCard() {
+function ProductCard({ title, rating, price, description}) {
     return (
         <ProductDiv>
             <ProductContainer>
                 <ProductPhoto>
-                    <Image 
-                    style= {{width: '70%', height: '200px'}}
-                    source={{
-                        uri: 'https://i.picsum.photos/id/142/200/300.jpg?hmac=B08HyXonHhJPFpULUNgMfoCFGZqymUB3NhBxo3iWTnc',
-                      }} />
+                    <Image
+                        style={{ width: '70%', height: '200px' }}
+                        source={require('../../assets/Jujutsu.png')} />
                 </ProductPhoto>
                 <ProductDescriptionDiv>
-                    <ProductTitle>Titulo do produto</ProductTitle>
-                    <ProductRating>Avaliação 5*</ProductRating>
-                    <ProductPrice>R$9999,99</ProductPrice>
-                    <ProductDescription numberOfLines={2}>Descrição Descrição Descrição Descrição Descrição Descrição Descrição Descrição
+                    <ProductTitle>{title}</ProductTitle>
+                    <ProductRating>{rating}</ProductRating>
+                    <ProductPrice>R${price}</ProductPrice>
+                    <ProductDescription numberOfLines={2}>{description}
                     </ProductDescription>
                 </ProductDescriptionDiv>
             </ProductContainer>

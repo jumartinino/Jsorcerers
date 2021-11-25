@@ -1,14 +1,15 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import ProductsCategory from './src/screens/ProductsCategory/ProductsCategory.tsx';
+import ProductsCategory from './src/screens/ProductsCategory/ProductsCategory';
 
 import Register from './src/screens/Register'
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Hello World!</Text>
-    </View>
+    <ProductsCategory></ProductsCategory>
+    // <View style={styles.container}>
+    //   <Text>Hello World!</Text>
+    // </View>
   );
 }
 

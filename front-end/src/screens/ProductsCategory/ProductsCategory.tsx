@@ -26,11 +26,7 @@ export default function ProductsCategory() {
                     )
             })} */}
 
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
+            <ProductCard title={'Jujutsu Kaisen - Batalha De Feiticeiros - 10'} rating={'4*'} price={20.33} description={'Para reaver seu corpo físico, Mekamaru, ou melhor, Kokichi Muta, se alia aos espíritos amaldiçoados. Mas o acordo entre eles é quebrado e o estudante se vê enfrentando Mahito. Será que Muta conseguirá escapar da morte com sua técnica secreta? Enquanto isso, em 31 de outubro, uma cortina recai sobre um distrito de Tokyo, marcando o início do "Incidente em Shibuya".'}/>
         </View>
     );
 }
