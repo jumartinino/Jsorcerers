@@ -40,7 +40,7 @@ export default function Login() {
             alert('Cadastro feito com sucesso!');
             navigation.navigate('login')
         },
-        (error) => {console.log(data.data_nasc)})
+        (error) => {console.log("Erro no Cadastro")})
     }
 
     const validAddress = new RegExp(

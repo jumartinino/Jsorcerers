@@ -4,13 +4,32 @@ import { View, Text, TextInput, TouchableOpacity, StyleSheet, Image, SafeAreaVie
 import { Controller, useForm } from 'react-hook-form';
 import COLORS from '../../components/Colors/Colors';
 import { useNavigation } from '@react-navigation/native';
+import api from "../../services/api";
 
 export default function Login() {
   const { control, handleSubmit, formState: { errors }, getValues } = useForm({ mode: 'onTouched' });
   const navigation = useNavigation();
 
   const onSubmit = (data: FormData) => {
-    navigation.navigate("homeTabs");
+
+    console.log(data._fields);
+
+    const userLogindata = {
+
+      email: data._fields.email._f.value,
+      password: data._fields.password._f.value
+
+    }
+
+    console.log(userLogindata);
+
+    api.post('/login', userLogindata).then(response => {
+        alert('Login feito com sucesso!');
+        navigation.navigate("homeTabs");
+    },
+    (error) => alert("E-mail ou senha inválidos"))
+
+    
   }
 
   interface FormData {
