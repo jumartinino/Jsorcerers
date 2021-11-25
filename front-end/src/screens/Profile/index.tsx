@@ -17,7 +17,7 @@ export default function Profile() {
             <Text style={styles.title}>Olá, Rafael</Text>
             <Image
               style={styles.profile} 
-              source={require('../../components/Images/pedro.png')}
+              source={require('../../assets/pedro.png')}
             />
           </View>
   
@@ -43,31 +43,31 @@ export default function Profile() {
   
             <ScrollView horizontal={true} showsHorizontalScrollIndicator ={false}>
               <TouchableOpacity style={styles.pedidosEach}>
-                <Image source={require('jsorcerers\front-end\src\components\Images\scotlandboard.jpg')} style={styles.image}/>
+                <Image source={require('../../assets/scotlandboard.jpg')} style={styles.image}/>
               </TouchableOpacity>
   
               <TouchableOpacity style={styles.pedidosEach}>
-                <Image source={require('jsorcerers\front-end\src\components\Images\boardprod.png')} style={styles.image} />
+                <Image source={require('../../assets/boardprod.png')} style={styles.image} />
+              </TouchableOpacity>
+  
+              {/* <TouchableOpacity style={styles.pedidosEach}>
+                <Image source={require('../../assets/oneaction.jpg')} style={styles.image}/>
+              </TouchableOpacity> */}
+              
+              <TouchableOpacity style={styles.pedidosEach}>
+                <Image source={require('../../assets/zodiaco.jpg')} style={styles.image}/>
               </TouchableOpacity>
   
               <TouchableOpacity style={styles.pedidosEach}>
-                <Image source={require('../../components/Images/oneaction.jpg')} style={styles.image}/>
+                <Image source={require('../../assets/abyss.jpg')} style={styles.image}/>
+              </TouchableOpacity>
+  
+              <TouchableOpacity style={styles.pedidosEach}>
+                <Image source={require('../../assets/scotlandboard.jpg')} style={styles.image}/>
               </TouchableOpacity>
               
               <TouchableOpacity style={styles.pedidosEach}>
-                <Image source={require('jsorcerers\front-end\src\components\Images\zodiaco.jpg')} style={styles.image}/>
-              </TouchableOpacity>
-  
-              <TouchableOpacity style={styles.pedidosEach}>
-                <Image source={require('jsorcerers\front-end\src\components\Images\abyss.jpg')} style={styles.image}/>
-              </TouchableOpacity>
-  
-              <TouchableOpacity style={styles.pedidosEach}>
-                <Image source={require('jsorcerers\front-end\src\components\Images\scotlandboard.jpg')} style={styles.image}/>
-              </TouchableOpacity>
-              
-              <TouchableOpacity style={styles.pedidosEach}>
-                <Image source={require('jsorcerers\front-end\src\components\Images\funko.jpg')} style={styles.image}/>
+                <Image source={require('../../assets/funko.jpg')} style={styles.image}/>
               </TouchableOpacity>
             </ScrollView>
           </View>
@@ -79,17 +79,17 @@ export default function Profile() {
   
               <View style={styles.favoritosColumn1}>
                                                               <TouchableOpacity style={styles.favoritosEach}>
-                  <Image source={require('jsorcerers\front-end\src\components\Images\jutsuu.jpg')} style={styles.photo}/>
+                  <Image source={require('../../assets/jutsuu.jpg')} style={styles.photo}/>
                   <Text style={styles.favoritoText}>Jujutsu Kaisen</Text>
   
                 </TouchableOpacity>
                                                               <TouchableOpacity style={styles.favoritosEach}>
-                  <Image source={require('jsorcerers\front-end\src\components\Images\fairyfunko.jpg')} style={styles.photo}/>
+                  <Image source={require('../../assets/fairyfunko.jpg')} style={styles.photo}/>
                   <Text style={styles.favoritoText}>Fairy Tale</Text>
   
                 </TouchableOpacity>
                                                               <TouchableOpacity style={styles.favoritosEach}>
-                  <Image source={require('jsorcerers\front-end\src\components\Images\masterboard.jpg')} style={styles.photo}/>
+                  <Image source={require('../../assets/masterboard.jpg')} style={styles.photo}/>
                   <Text style={styles.favoritoText}>Master Board</Text>
                 </TouchableOpacity>
               </View>
@@ -97,17 +97,17 @@ export default function Profile() {
   
               <View>
                                                               <TouchableOpacity style={styles.favoritosEach}>
-                  <Image source={require('jsorcerers\front-end\src\components\Images\zodiaco.jpg')} style={styles.photo}/>
+                  <Image source={require('../../assets/zodiaco.jpg')} style={styles.photo}/>
                   <Text style={styles.favoritoText}>Cavaleiros do Zodíaco</Text>
   
                 </TouchableOpacity>
                                                               <TouchableOpacity style={styles.favoritosEach}>
-                  <Image source={require('jsorcerers\front-end\src\components\Images\yodaaction.jpg')} style={styles.photo}/>
+                  <Image source={require('../../assets/yodaaction.jpg')} style={styles.photo}/>
                   <Text style={styles.favoritoText}>Baby Yoda</Text>
   
                 </TouchableOpacity>
                                                               <TouchableOpacity style={styles.favoritosEach}>
-                  <Image source={require('jsorcerers\front-end\src\components\Images\scotlandboard.jpg')} style={styles.photo}/>
+                  <Image source={require('../../assets/scotlandboard.jpg')} style={styles.photo}/>
                   <Text style={styles.favoritoText}>Scotland Yard</Text>
   
                 </TouchableOpacity>
