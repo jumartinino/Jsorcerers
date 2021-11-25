@@ -96,17 +96,26 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: COLORS.darkBrown
   },
+  name:{ 
+    fontSize:18,
+    fontWeight:'bold' 
+  },
 })
 
 const Cart = () => {
 
   const [products, setProducts] = React.useState([
-    { _id: 1, name: 'Item 1', price: 50, quantity: 0, description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore' },
-    { _id: 2, name: 'Item 2', price: 29, quantity: 0, description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore' },
-    { _id: 3, name: 'Item 3', price: 200, quantity: 0, description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore' },
-    { _id: 4, name: 'Item 4', price: 33, quantity: 0, description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore' },
-    { _id: 5, name: 'Item 5', price: 42, quantity: 0, description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore' },
-    { _id: 6, name: 'Item 6', price: 97, quantity: 0, description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore' },
+    { _id: 1, name: 'Grow - Scotland Yard Maquina do Tempo', price: 68, quantity: 0, description: ' Os jogadores leem juntos, em voz alta, um dos casos, para cada local existe uma dica, numerada, que pode ser consultada no livro de pistas. ' },
+
+    { _id: 2, name: 'Jogo Perfil 6 - Grow ', price: 74, quantity: 0, description: ' CELEBRANDO 80 ANOS DE QUADRINHOS MARVEL!: Esta versão do jogo de tabuleiro Monopoly possui cartas, temática e detalhes inspirados na Marvel ' },
+
+    { _id: 3, name: 'Demon Slayer: Kimetsu No Yaiba - 1', price: 28, quantity: 0, description: 'Estamos na Era Taishou. O dia-a-dia pacato de Tanjiro, um gentil garoto que vende carvão, se transforma radicalmente quando sua família é assassinada por um demônio. ' },
+
+    { _id: 4, name: 'Star Wars The Black Series The Child (Baby Yoda)', price: 46, quantity: 0, description: 'The child: os fãs se apaixonaram pelo personagem chamado de (baby yoda), e agora podem tê-los para si este personagem star wars the black series ' },
+
+    { _id: 5, name: 'Figura de ação Jujutsu Kaisen Gojo Satoru ', price: 98, quantity: 0, description: 'Materiais de alta qualidade: feito de materiais ecológicos, luxuosos e bonitos e acabamento fino' },
+
+    { _id: 6, name: 'Munchkin - Galápagos Jogos, Multicor, Medio', price: 120, quantity: 0, description: ' Um jogo de cartas para quem gosta de tretas, explore a Dungeon, trapaceie, pegue todo o tesouro e saia correndo! ' },
   ]);
 
 
@@ -131,8 +140,6 @@ const Cart = () => {
 
   return (
     <SafeAreaView style={{ flex: 1 }}>
-      <StatusBar barStyle="dark-content" hidden={false} backgroundColor="white" translucent={true} />
-
       <View style={styles.header}>
         <Text style={styles.headerTitle}>Carrinho</Text>
       </View>

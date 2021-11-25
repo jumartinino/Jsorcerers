@@ -4,17 +4,21 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
+import { FiHome, FiUser, FiShoppingCart } from 'react-icons/fi';
+
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
 
 import ProductsCategory from './src/screens/ProductsCategory/index';
 import Register from './src/screens/Register/index'
-import Edit from './src/screens/EditProfile';
+// import Edit from './src/screens/EditProfile';
 import Profile from './src/screens/Profile';
 import Login from './src/screens/Login';
-import Home from './src/screens/HomeScreen';
+import Home from './src/screens/HomeScreen/index';
 import Products from './src/screens/Products';
 import Cart from './src/screens/ShoppingCart';
+import Entypo from 'react-native-vector-icons/Entypo';
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
 // Rota de login para acessar home
 function LoginRoute() {
@@ -30,10 +34,21 @@ function LoginRoute() {
 // Rota de menu tab da home, carrinho e perfil
 function HomeTabs() {
   return (
-    <Tab.Navigator>
-      <Tab.Screen name="home" component={Home} options={{ headerShown: false }} />
-      <Tab.Screen name="cart" component={Cart} options={{ headerShown: false }} />
-      <Tab.Screen name="profile" component={Profile} options={{ headerShown: false }} />
+    <Tab.Navigator tabBarOptions={{showLabel: false}}>
+      <Tab.Screen name="home" component={Home} options={{
+        headerShown: false, tabBarIcon: ({ size, color }) => (
+          <FiHome name='home' size={size} color={color} />
+        ), showIcon: true
+      }} />
+      <Tab.Screen name="cart" component={Cart} options={{
+        headerShown: false, tabBarIcon: ({ size, color }) => (
+          <FiShoppingCart name="home" size={size} color={color} />
+        ), showIcon: true
+      }} />
+      <Tab.Screen name="profile" component={Profile} options={{
+        headerShown: false, tabBarIcon: ({ size, color }) => 
+        (<FiUser name='user' size={size} color={color} />)
+      }} />
     </Tab.Navigator>
   )
 }
@@ -41,9 +56,21 @@ function HomeTabs() {
 // Rota do acesso sem login
 function HomeWithoutLogin() {
   return (
-    <Tab.Navigator>
-      <Tab.Screen name="home" component={Home} options={{ headerShown: false }} />
-      <Tab.Screen name="cart" component={Cart} options={{ headerShown: false }} />
+    <Tab.Navigator tabBarOptions={{showLabel: false}}>
+      <Tab.Screen name="home" component={Home} options={{
+        headerShown: false, tabBarIcon: ({ size, color }) => (
+          <FiHome name='home' size={size} color={color} />
+        ), showIcon: true
+      }} />
+      <Tab.Screen name="cart" component={Cart} options={{
+        headerShown: false, tabBarIcon: ({ size, color }) => (
+          <FiShoppingCart name="home" size={size} color={color} />
+        ), showIcon: true
+      }} />
+      <Tab.Screen name="profile" component={Register} options={{
+        headerShown: false, tabBarIcon: ({ size, color }) => 
+        (<FiUser name='user' size={size} color={color} />)
+      }} />
     </Tab.Navigator>
   )
 }
