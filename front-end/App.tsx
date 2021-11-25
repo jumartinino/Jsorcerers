@@ -36,22 +36,22 @@ function HomeTabs() {
   )
 }
 
-// function SearchStack() {
-//   return (
-//     <Stack.Navigator>
-//       <Stack.Screen name="category" component={ProductsCategory} />
-//       <Stack.Screen name="products" component={Products} />
-//     </Stack.Navigator>
-//   )
-// }
+function HomeWithoutLogin() {
+  return (
+    <Tab.Navigator>
+      <Tab.Screen name="home" component={Home} options={{ headerShown: false }} />
+      <Tab.Screen name="cart" component={Cart} options={{ headerShown: false }} />
+    </Tab.Navigator>
+  )
+}
 
 export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-      <Tab.Screen name="home" component={Home} options={{ headerShown: false }} />
         <Stack.Screen name="loginRoute" component={LoginRoute} options={{ headerShown: false }} />
         <Stack.Screen name="homeTabs" component={HomeTabs} options={{ headerShown: false }} />
+        <Stack.Screen name="homeWithoutLogin" component={HomeWithoutLogin} options={{ headerShown: false }} />
         <Stack.Screen name="category" component={ProductsCategory} />
         <Stack.Screen name="products" component={Products} />
       </Stack.Navigator>

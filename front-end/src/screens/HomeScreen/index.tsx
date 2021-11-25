@@ -11,11 +11,10 @@ import Routes from '../../components/Routes/index'
 Icon.loadFont();
 
 const HomeScreen = () => {
-  const Navigation = useNavigation();
-  return (
-    <SafeAreaView>
-      <StatusBar barStyle="dark-content" hidden={false} backgroundColor="white" translucent={true} />
+  const navigation = useNavigation();
 
+  return (
+    <SafeAreaView style={{ flex: 1 }}>
       <ScrollView>
 
         <View style={styles.header}>
@@ -35,7 +34,7 @@ const HomeScreen = () => {
           <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
 
             <View style={styles.categories}>
-              <TouchableOpacity>
+              <TouchableOpacity onPress={()=> navigation.navigate('category')}>
                 <ImageBackground style={styles.eachPhoto} source={require('../../assets/mangaDef.jpg')}>
                   <View style={styles.textView}>
                     <Text style={styles.photoText}>Mangá</Text>

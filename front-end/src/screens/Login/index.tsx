@@ -24,12 +24,12 @@ export default function Login() {
     console.log(userLogindata);
 
     api.post('/login', userLogindata).then(response => {
-        alert('Login feito com sucesso!');
-        navigation.navigate("homeTabs");
+      alert('Login feito com sucesso!');
+      navigation.navigate("homeTabs");
     },
-    (error) => alert("E-mail ou senha inválidos"))
+      (error) => alert("E-mail ou senha inválidos"))
 
-    
+
   }
 
   interface FormData {
@@ -126,6 +126,11 @@ export default function Login() {
               </Text>
             </TouchableOpacity>
           </View>
+
+          <TouchableOpacity onPress={()=>navigation.navigate('homeWithoutLogin')}>
+            <Text style={styles.visitante}>Entrar como visitante</Text>
+          </TouchableOpacity>
+
         </View>
       </ScrollView>
     </SafeAreaView>
@@ -189,5 +194,11 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     marginTop: 10,
     borderRadius: 5
+  },
+  visitante: {
+    alignSelf: 'center',
+    fontSize: 17,
+    color: COLORS.darkBrown,
+    marginTop: 40
   }
 });
