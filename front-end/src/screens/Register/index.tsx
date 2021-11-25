@@ -22,9 +22,11 @@ export default function Login() {
 
     const onSubmit = (data: FormData) => {
         console.log(data);
-        api.post('api/register', data).then(response => {
+        console.log(api);
+        //console.log(api.get('api/users'))
+        api.post('api/users', data).then(response => {
             alert('Cadastro feito com sucesso!')
-            navigation.navigate('Login')
+            navigation.navigate('login')
         },
         (error => ('Cadastro não pode ser concluído')))      
     }
