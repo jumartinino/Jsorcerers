@@ -1,14 +1,14 @@
 import React from 'react';
-import {View,Text,FlatList,Button,SafeAreaView,processColor,StyleSheet,TouchableOpacity,StatusBar, ScrollView} from 'react-native';
-import COLORS from '../../Colors'
+import { View, Text, FlatList, Button, SafeAreaView, processColor, StyleSheet, TouchableOpacity, StatusBar, ScrollView } from 'react-native';
+import COLORS from '../../components/Colors/Colors'
 
 
-const ListItem = ({ item,onSubtract,onAdd }) => (
+const ListItem = ({ item, onSubtract, onAdd }) => (
   <View style={styles.bigContainer}>
     <View style={styles.container}>
       <View style={styles.titulo}>
         <Text style={styles.name}>
-        {item.name} - 
+          {item.name} -
         </Text>
         <Text style={styles.price}>R$ {item.price}</Text>
       </View>
@@ -20,9 +20,9 @@ const ListItem = ({ item,onSubtract,onAdd }) => (
 
       <View style={styles.bigButton}>
 
-        <TouchableOpacity style={styles.button1} onPress={onSubtract}> 
-        <Text> - </Text>                   </TouchableOpacity>
-                <Text style={styles.quantity}> {item.quantity} </Text>
+        <TouchableOpacity style={styles.button1} onPress={onSubtract}>
+          <Text> - </Text>                   </TouchableOpacity>
+        <Text style={styles.quantity}> {item.quantity} </Text>
         <TouchableOpacity style={styles.button2} onPress={onAdd}> <Text> + </Text></TouchableOpacity>
       </View>
 
@@ -30,71 +30,71 @@ const ListItem = ({ item,onSubtract,onAdd }) => (
   </View>
 );
 
-const styles=StyleSheet.create ({
-  bigContainer:{
+const styles = StyleSheet.create({
+  bigContainer: {
     flexDirection: 'row',
     flex: 1,
-    alignItems: 'center', 
-    marginTop:15, 
-    width:'90%', 
-    alignSelf:'center'
-  },
-  container:{
-    borderColor:COLORS.lightGreen,
-    width:'100%', 
-    borderWidth:2,
-
-  },
-  titulo:{ 
-    flexDirection: 'row', 
-    flex: 1, 
     alignItems: 'center',
-    justifyContent:'space-between',
-    marginLeft:5,
+    marginTop: 15,
+    width: '90%',
+    alignSelf: 'center'
+  },
+  container: {
+    borderColor: COLORS.lightGreen,
+    width: '100%',
+    borderWidth: 2,
 
   },
-  bigButton:{  
-    marginRight:15,
-    alignSelf:'flex-end',
-    flexDirection: 'row', 
-    marginLeft:15,
-    marginTop:10,
+  titulo: {
+    flexDirection: 'row',
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    marginLeft: 5,
+
   },
-  name:{ 
-    fontSize:18, 
+  bigButton: {
+    marginRight: 15,
+    alignSelf: 'flex-end',
+    flexDirection: 'row',
+    marginLeft: 15,
+    marginTop: 10,
   },
-  price:{ 
-    fontWeight:'bold', 
-    fontSize:15, 
-    alignItems:'flex-end',
-    marginRight:10
-    },
-  button1:{
-    backgroundColor:COLORS.lightGreen,
-    paddingVertical:0,
-    marginBottom:15,
-    
+  name: {
+    fontSize: 18,
   },
-  button2:{
-    backgroundColor:COLORS.lightGreen,
-    marginBottom:15,
+  price: {
+    fontWeight: 'bold',
+    fontSize: 15,
+    alignItems: 'flex-end',
+    marginRight: 10
   },
-  quantity:{
-    marginBottom:5
-  },
-  description:{
-  marginLeft:5
-},
-  header:{
+  button1: {
     backgroundColor: COLORS.lightGreen,
-    paddingVertical:5,
-    marginTop:30
+    paddingVertical: 0,
+    marginBottom: 15,
+
   },
-  headerTitle:{
-    fontSize:30,
-    alignSelf:'center',
-    fontWeight:'bold',
-    color:COLORS.darkBrown
+  button2: {
+    backgroundColor: COLORS.lightGreen,
+    marginBottom: 15,
+  },
+  quantity: {
+    marginBottom: 5
+  },
+  description: {
+    marginLeft: 5
+  },
+  header: {
+    backgroundColor: COLORS.lightGreen,
+    paddingVertical: 5,
+    marginTop: 30
+  },
+  headerTitle: {
+    fontSize: 30,
+    alignSelf: 'center',
+    fontWeight: 'bold',
+    color: COLORS.darkBrown
   },
 })
 
@@ -110,13 +110,13 @@ const Cart = () => {
   ]);
 
 
-  const onSubtract = (item:any, index:any) => {
+  const onSubtract = (item, index) => {
     const nextProducts = [...products];
     nextProducts[index].quantity -= 1;
     setProducts(nextProducts);
   };
 
-  const onAdd = (item:any, index:any) => {
+  const onAdd = (item, index) => {
     const nextProducts = [...products];
     nextProducts[index].quantity += 1;
     setProducts(nextProducts);
@@ -131,29 +131,29 @@ const Cart = () => {
 
   return (
     <SafeAreaView style={{ flex: 1 }}>
-        <StatusBar barStyle = "dark-content" hidden = {false}             backgroundColor = "white" translucent = {true}/>
+      <StatusBar barStyle="dark-content" hidden={false} backgroundColor="white" translucent={true} />
 
-        <View style={styles.header}>
-          <Text style={styles.headerTitle}>Carrinho</Text>
-        </View>
+      <View style={styles.header}>
+        <Text style={styles.headerTitle}>Carrinho</Text>
+      </View>
 
-        <ScrollView>
-            <FlatList
-              data={products}
-              renderItem={({ item, index }) => (
-                <ListItem
-                  item={item}
-                  onSubtract={() => onSubtract(item, index)}
-                  onAdd={() => onAdd(item, index)}
-                />
-              )}
-              keyExtractor={(item) => item._id}
+      <ScrollView>
+        <FlatList
+          data={products}
+          renderItem={({ item, index }) => (
+            <ListItem
+              item={item}
+              onSubtract={() => onSubtract(item, index)}
+              onAdd={() => onAdd(item, index)}
             />
+          )}
+          keyExtractor={(item) => item._id}
+        />
       </ScrollView>
-       <View style={{flexDirection: 'row', justifyContent:'space-between', paddingHorizontal:10}}>
-          <Text>Total: {totalPrice}</Text>
-          <Text>Quantidade de itens: {totalQuantity}</Text>
-       </View>
+      <View style={{ flexDirection: 'row', justifyContent: 'space-between', paddingHorizontal: 10 }}>
+        <Text>Total: {totalPrice}</Text>
+        <Text>Quantidade de itens: {totalQuantity}</Text>
+      </View>
     </SafeAreaView>
   );
 };
