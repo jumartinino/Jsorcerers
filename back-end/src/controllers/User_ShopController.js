@@ -17,7 +17,7 @@ const create = async(req,res) => {
 
             name: req.body.name,
             UserId: user.id
-
+            
 
           }
           const user_shop = await User_shop.create(newShopData);
