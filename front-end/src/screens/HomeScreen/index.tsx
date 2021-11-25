@@ -1,12 +1,17 @@
-import React = require('react');
+// import React = require('react');
+import React from 'react';
 import {View, Text, TextInput, StyleSheet, SafeAreaView, StatusBar, Image, ScrollView, TouchableOpacity,ImageBackground} from 'react-native';
 import COLORS from '../../components/Colors/Colors';
+import { useNavigation } from '@react-navigation/native';
 
 import Icon from 'react-native-vector-icons/MaterialIcons';
+
+import Routes from '../../components/Routes/index'
 
 Icon.loadFont();
 
 const HomeScreen=()=> {
+  const Navigation = useNavigation();
   return (
     <SafeAreaView>
       <StatusBar barStyle = "dark-content" hidden = {false} backgroundColor = "white" translucent = {true}/>
@@ -16,7 +21,7 @@ const HomeScreen=()=> {
         <View style={styles.header}>
           <Image
             style={styles.profile} 
-            source={require('../../Images/rafael.jpg')}
+            source={require('../../assets/rafael.jpg')}
           />
         </View>
           <View style={styles.searchContainer}>
@@ -30,8 +35,8 @@ const HomeScreen=()=> {
             <ScrollView horizontal={true} showsHorizontalScrollIndicator ={false}>
 
               <View style={styles.categoriesPhotos}>
-                  <TouchableOpacity>
-                    <ImageBackground style={styles.eachPhoto} source={require('../../Images/mangaDef.jpg')}>
+                  <TouchableOpacity onPress={()=> Navigation.navigate('category')}>
+                    <ImageBackground style={styles.eachPhoto} source={require('../../assets/mangaDef.jpg')}>
                     <View style={styles.textView}>
                       <Text style={styles.photoText}>Mangá</Text>
                     </View>
@@ -39,7 +44,7 @@ const HomeScreen=()=> {
                   </TouchableOpacity>
 
                   <TouchableOpacity>
-                    <ImageBackground style={styles.eachPhoto} source={require('../../Images/boardDef.jpg')}>
+                    <ImageBackground style={styles.eachPhoto} source={require('../../assets/boardDef.jpg')}>
                     <View style={styles.textView}>
                       <Text style={styles.photoText}>Board Game</Text>
                     </View>
@@ -47,7 +52,7 @@ const HomeScreen=()=> {
                   </TouchableOpacity>
 
                   <TouchableOpacity >
-                    <ImageBackground style={styles.eachPhoto} source={require('../../Images/actionDef.jpg')}>
+                    <ImageBackground style={styles.eachPhoto} source={require('../../assets/actionDef.jpg')}>
                     <View style={styles.textView}>
                       <Text style={styles.photoText}>Action Figures</Text>
                     </View>
@@ -55,7 +60,7 @@ const HomeScreen=()=> {
                   </TouchableOpacity>
 
                   <TouchableOpacity >
-                    <ImageBackground style={styles.eachPhoto} source={require('../../Images/funkoDef.jpg')}>
+                    <ImageBackground style={styles.eachPhoto} source={require('../../assets/funkoDef.jpg')}>
                     <View style={styles.textView}>
                       <Text style={styles.photoText}>Funko Pop</Text>
                     </View>
@@ -78,19 +83,19 @@ const HomeScreen=()=> {
 
                 <View style={styles.productsColumn1}>
                   <TouchableOpacity style={styles.productsEach}>
-                      <Image source={require('../../Images/boardprod.png')} style={styles.photo}/>
+                      <Image source={require('../../assets/boardprod.png')} style={styles.photo}/>
                       <Text style={styles.productText}>Escape Room: Board Game</Text>
                       <Text style={styles.productPrice}>R$9999,99</Text>
                   </TouchableOpacity>
 
                   <TouchableOpacity style={styles.productsEach}>
-                      <Image source={require('../../Images/boardprod.png')} style={styles.photo}/>
+                      <Image source={require('../../assets/boardprod.png')} style={styles.photo}/>
                       <Text style={styles.productText}>Escape Room: Board Game</Text>
                       <Text style={styles.productPrice}>R$9999,99</Text>
                   </TouchableOpacity>
 
                   <TouchableOpacity style={styles.productsEach}>
-                      <Image source={require('../../Images/boardprod.png')} style={styles.photo}/>
+                      <Image source={require('../../assets/boardprod.png')} style={styles.photo}/>
                       <Text style={styles.productText}>Escape Room: Board Game</Text>
                       <Text style={styles.productPrice}>R$9999,99</Text>
                   </TouchableOpacity>
@@ -98,19 +103,19 @@ const HomeScreen=()=> {
 
                 <View style={styles.productsColumn2}>
                   <TouchableOpacity style={styles.productsEach}>
-                      <Image source={require('../../Images/boardprod.png')} style={styles.photo}/>
+                      <Image source={require('../../assets/boardprod.png')} style={styles.photo}/>
                       <Text style={styles.productText}>Escape Room: Board Game</Text>
                       <Text style={styles.productPrice}>R$9999,99</Text>
                   </TouchableOpacity>
 
                   <TouchableOpacity style={styles.productsEach}>
-                      <Image source={require('../../Images/boardprod.png')} style={styles.photo}/>
+                      <Image source={require('../../assets/boardprod.png')} style={styles.photo}/>
                       <Text style={styles.productText}>Escape Room: Board Game</Text>
                       <Text style={styles.productPrice}>R$9999,99</Text>
                   </TouchableOpacity>
 
                   <TouchableOpacity style={styles.productsEach}>
-                      <Image source={require('../../Images/boardprod.png')} style={styles.photo}/>
+                      <Image source={require('../../assets/boardprod.png')} style={styles.photo}/>
                       <Text style={styles.productText}>Escape Room: Board Game</Text>
                       <Text style={styles.productPrice}>R$9999,99</Text>
                   </TouchableOpacity>
@@ -167,7 +172,7 @@ categoriesPhotos:{
 eachPhoto:{
   width:170,
   height: 100,
-  marginHorizontal:5, 
+  marginHorizontal:5,
  },
 textView:{
   position:'absolute',

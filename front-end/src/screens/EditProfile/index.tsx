@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, Text, TextInput, TouchableOpacity, StyleSheet,Image, SafeAreaView, StatusBar, ScrollView} from 'react-native';
-import COLORS from '../../Cores/Colors';
+import COLORS from '../../components/Colors/Colors';
 import Profile from '../Profile/index';
 
 export default function EditProfile() {
@@ -11,7 +11,7 @@ export default function EditProfile() {
       <ScrollView>
 
         <View style={styles.header}>
-          <Image style={styles.image} source={require('../../Images')}/>
+          <Image style={styles.image} source={require('../../assets/cadastro.png')}/>
         </View>
 
         <View style={styles.editContainer}>
@@ -31,9 +31,10 @@ export default function EditProfile() {
       
         </View>
 
-          <TouchableOpacity>
-            <View style={styles.button} 
-                  onPress={() => navigation.navigate('Profile')}>
+          <TouchableOpacity 
+            //onPress={() => navigation.navigate('Profile')}
+          >
+            <View style={styles.button}>
               <Text style={styles.buttonTitle }>Editar</ Text>
             </View>
           </TouchableOpacity>
