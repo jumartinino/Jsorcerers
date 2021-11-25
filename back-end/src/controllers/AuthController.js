@@ -19,6 +19,12 @@ const login = async(req, res)=>{
 		return res.status(500).json({err: e})
 	}
 }
+
+const logout = async(req, res) => {
+	req.logout();
+	res.redirect('/');
+}
+
 const getDetails = async(req, res) => {
 	try {
 		const token = Auth.getToken(req);
@@ -34,5 +40,6 @@ const getDetails = async(req, res) => {
 
 module.exports = {
 	login,
+	logout,
 	getDetails
 }
