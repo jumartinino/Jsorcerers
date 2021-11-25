@@ -12,6 +12,8 @@ import {
     ProductDescription
 } from './styles';
 
+
+// Recebe titulo, avaliações, preço e descrição do produto para exibir na tela
 function ProductCard({ title, rating, price, description}) {
     const navigation = useNavigation();
     return (

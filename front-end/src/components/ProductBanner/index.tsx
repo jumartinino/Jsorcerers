@@ -1,6 +1,8 @@
 import React from 'react';
 import { BannerDiv, BannerImage, BannerTitle } from './styles'
 
+
+// Cria o banner da tela de categoria de produtos
 function ProductBanner() {
   return (
     <BannerDiv>

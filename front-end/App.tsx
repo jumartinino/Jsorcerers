@@ -16,6 +16,7 @@ import Home from './src/screens/HomeScreen';
 import Products from './src/screens/Products';
 import Cart from './src/screens/ShoppingCart';
 
+// Rota de login para acessar home
 function LoginRoute() {
   return (
     <Stack.Navigator>
@@ -26,6 +27,7 @@ function LoginRoute() {
   )
 }
 
+// Rota de menu tab da home, carrinho e perfil
 function HomeTabs() {
   return (
     <Tab.Navigator>
@@ -36,6 +38,7 @@ function HomeTabs() {
   )
 }
 
+// Rota do acesso sem login
 function HomeWithoutLogin() {
   return (
     <Tab.Navigator>

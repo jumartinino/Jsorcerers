@@ -6,7 +6,7 @@ import {
     DivisionBar
 } from "./styles";
 
-
+// Recebe nome, pergunta e respota referente a determinado produto
 export default function ProductCommentaty({name, question, answer}){
     return(
         <CommentaryDiv>

@@ -7,6 +7,8 @@ import {
     ProductPrice
  } from "./styles";
 
+
+ // Mostra produtos semelhantes com base na categoria do produto que está sendo visto
 export default function SameCategory(){
     return(
         <SameCategoryDiv>

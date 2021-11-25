@@ -10,7 +10,6 @@ export default function Profile() {
 
   return(
     <SafeAreaView style={{ flex: 1 }}>
-        <StatusBar barStyle = "dark-content" hidden = {false} backgroundColor = "white" translucent = {true}/>
         <ScrollView>
   
           <View style={styles.header}>
@@ -49,10 +48,6 @@ export default function Profile() {
               <TouchableOpacity style={styles.pedidosEach}>
                 <Image source={require('../../assets/boardprod.png')} style={styles.image} />
               </TouchableOpacity>
-  
-              {/* <TouchableOpacity style={styles.pedidosEach}>
-                <Image source={require('../../assets/oneaction.jpg')} style={styles.image}/>
-              </TouchableOpacity> */}
               
               <TouchableOpacity style={styles.pedidosEach}>
                 <Image source={require('../../assets/zodiaco.jpg')} style={styles.image}/>
