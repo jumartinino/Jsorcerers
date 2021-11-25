@@ -1,10 +1,12 @@
 import React from 'react';
-import { BannerDiv, BannerTitle } from './styles'
+import { BannerDiv, BannerImage, BannerTitle } from './styles'
 
-function ProductBanner(){
-  return(
+function ProductBanner() {
+  return (
     <BannerDiv>
-      <BannerTitle>Manga</BannerTitle>
+      <BannerImage source={require('../../assets/BannerManga.png')} >
+        <BannerTitle>Manga</BannerTitle>
+      </BannerImage>
     </BannerDiv>
   )
 }
