@@ -6,4 +6,4 @@ node_modules/
 .env
 .idea
 id_rsa_priv.pem
-    
+yarn.lock    

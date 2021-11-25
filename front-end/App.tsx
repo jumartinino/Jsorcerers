@@ -1,19 +1,60 @@
-// import React = require('react');
 import React from 'react';
-import { StyleSheet, Text, View, StatusBar } from 'react-native';
-import {NavigationContainer} from '@react-navigation/native'
-import HomeScreen from './src/screens/HomeScreen';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
-const {Navigator, Screen} = createNativeStackNavigator();
+import { StyleSheet, Text, View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import ProductsCategory from './src/screens/ProductsCategory/ProductsCategory';
 
-const App = () => {  
-  return ( 
+const Stack = createStackNavigator();
+const Tab = createBottomTabNavigator();
+
+import ProductsCategory from './src/screens/ProductsCategory/index';
+import Register from './src/screens/Register/index'
+import Edit from './src/screens/EditProfile';
+import Profile from './src/screens/Profile';
+import Login from './src/screens/Login';
+import Home from './src/screens/HomeScreen';
+import Products from './src/screens/Products';
+import Cart from './src/screens/ShoppingCart';
+
+function LoginRoute() {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen name="login" component={Login} options={{ headerShown: false }} />
+      <Stack.Screen name="register" component={Register} />
+      <Stack.Screen name="home" component={Home} options={{ headerShown: false }} />
+    </Stack.Navigator>
+  )
+}
+
+function HomeTabs() {
+  return (
+    <Tab.Navigator>
+      <Tab.Screen name="home" component={Home} options={{ headerShown: false }} />
+      <Tab.Screen name="cart" component={Cart} options={{ headerShown: false }} />
+      <Tab.Screen name="profile" component={Profile} options={{ headerShown: false }} />
+    </Tab.Navigator>
+  )
+}
+
+// function SearchStack() {
+//   return (
+//     <Stack.Navigator>
+//       <Stack.Screen name="category" component={ProductsCategory} />
+//       <Stack.Screen name="products" component={Products} />
+//     </Stack.Navigator>
+//   )
+// }
+
+export default function App() {
+  return (
     <NavigationContainer>
-      <Navigator>
-            <Screen options={{headerShown:false}} name="Home" component={HomeScreen}></Screen>
-      </Navigator>    
-    </NavigationContainer>  
+      <Stack.Navigator>
+        <Stack.Screen name="loginRoute" component={LoginRoute} options={{ headerShown: false }} />
+        <Stack.Screen name="homeTabs" component={HomeTabs} options={{ headerShown: false }} />
+        <Stack.Screen name="category" component={ProductsCategory} />
+        <Stack.Screen name="products" component={Products} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
-};
-
-export default App;
+}

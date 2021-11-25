@@ -1,17 +1,20 @@
 // import React = require('react');
 import React from 'react';
-import { View, Text, TextInput, StyleSheet, SafeAreaView, StatusBar, Image, ScrollView, TouchableOpacity, ImageBackground } from 'react-native';
+import {View, Text, TextInput, StyleSheet, SafeAreaView, StatusBar, Image, ScrollView, TouchableOpacity,ImageBackground} from 'react-native';
 import COLORS from '../../components/Colors/Colors';
+import { useNavigation } from '@react-navigation/native';
 
 import Icon from 'react-native-vector-icons/MaterialIcons';
-import { FlingGestureHandler } from 'react-native-gesture-handler';
+
+import Routes from '../../components/Routes/index'
 
 Icon.loadFont();
 
-const HomeScreen = () => {
+const HomeScreen=()=> {
+  const Navigation = useNavigation();
   return (
     <SafeAreaView>
-      <StatusBar barStyle="dark-content" hidden={false} backgroundColor="white" translucent={true} />
+      <StatusBar barStyle = "dark-content" hidden = {false} backgroundColor = "white" translucent = {true}/>
 
       <ScrollView>
 
@@ -70,7 +73,6 @@ const HomeScreen = () => {
             <Text style={styles.productsTitle}>Produtos</Text>
           </View>
 
-          <View style={styles.productsBigContainer}>
 
             <TouchableOpacity style={styles.productsEach}>
               <Image source={require('jsorcerers\front-end\src\assets\boardprod.png')} style={styles.photo} />
@@ -113,79 +115,49 @@ const HomeScreen = () => {
                 <Text style={styles.productText}>Scotland Yard Maquina do Tempo </Text>
                 <Text style={styles.productPrice}>R$84,99</Text>
               </View>
-            </TouchableOpacity>
-          </View>
 
-        </View>
+          </View>
       </ScrollView>
     </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
-  header: {
+  header:{
     flexDirection: 'row',
     justifyContent: 'space-between',
     paddingVertical: 10,
-    paddingHorizontal: 10,
-    marginTop: 30,
+    paddingHorizontal:10,
+    marginTop:30,
   },
-  profile: {
-    height: 50,
-    width: 50,
-    borderRadius: 25,
+  profile:{
+    height:50,
+    width:50,
+    borderRadius:25,
   },
-  searchContainer: {
-    borderRadius: 10,
-    borderColor: COLORS.darkBrown,
-    backgroundColor: '#F4F4F4',
-    flexDirection: 'row',
-    paddingHorizontal: 10,
-    width: "90%",
-    borderWidth: 1,
-    marginLeft: 20
+  searchContainer:{
+      borderRadius:10,
+      borderColor: COLORS.darkBrown,
+      backgroundColor: '#F4F4F4',
+      flexDirection: 'row',
+      paddingHorizontal:10,  
+      width: "90%",
+      borderWidth: 1,
+      marginLeft:20
   },
-  input: {
-    fontSize: 17,
+  input:{
+    fontSize:17,
     width: "100%",
   },
-  categTitle: {
-    color: COLORS.darkBrown,
+  categTitle:{
+    color: COLORS.darkBrown, 
     fontSize: 20,
-    fontWeight: 'bold',
+    fontWeight:'bold',
     marginLeft: 20,
     paddingVertical: 5,
-    paddingHorizontal: 0,
-  },
-  categoriesPhotos: {
-    flexDirection: 'row',
-    flex: 1,
-    marginVertical: 5,
-    marginHorizontal: 10,
-    borderRadius: 10
-  },
-  eachPhoto: {
-    width: 170,
-    height: 100,
-    marginHorizontal: 5,
-    borderRadius: 10
-  },
-  textView: {
-    position: 'absolute',
-    justifyContent: 'center',
-    alignItems: 'center',
-    top: 0,
-    left: 0,
-    right: 0,
-    bottom: 0,
-  },
-  photoText: {
-    fontSize: 20,
-    color: 'white',
-    fontWeight: 'bold',
-  },
-  productsBigContainer: {
-    display: 'flex',
+    paddingHorizontal:0,   
+},
+categoriesPhotos:{
     flexDirection: 'row',
     flexWrap: 'wrap',
     justifyContent: 'space-evenly'
