@@ -22,6 +22,8 @@ export default function Login() {
     const { control, handleSubmit, formState: { errors }, getValues } = useForm({ mode: 'onTouched' });
     const navigation = useNavigation();
 
+    // Lógica para Conversão de data DD/MM/AAAA para AAAA-MM-DD
+    // (formato padrão da validação de data no back-end)
     const onSubmit = (data: FormData) => {
         console.log(data);
         data.data_nasc = data.data_nasc.replaceAll('/','-');
@@ -35,7 +37,8 @@ export default function Login() {
         }
 
         data.data_nasc = FormataStringData(data.data_nasc);
-
+        //data agora está no formato padrão
+        
         api.post('/users', data).then(response => {
             alert('Cadastro feito com sucesso!');
             navigation.navigate('login')

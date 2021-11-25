@@ -12,16 +12,13 @@ export default function Login() {
 
   const onSubmit = (data: FormData) => {
 
-    console.log(data._fields);
-
+    // Gerando JSON para o back manualmente
     const userLogindata = {
 
       email: data._fields.email._f.value,
       password: data._fields.password._f.value
 
     }
-
-    console.log(userLogindata);
 
     api.post('/login', userLogindata).then(response => {
       alert('Login feito com sucesso!');
