@@ -1,5 +1,6 @@
 const { response } = require('express');
 const Favorite = require('../models/Favorites');
+const {validationResult} = require('express-validator');
 
 const create = async(req,res) => {
     try{

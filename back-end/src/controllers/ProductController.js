@@ -1,5 +1,6 @@
 const { response } = require('express');
 const Product = require('../models/Product');
+const {validationResult} = require('express-validator');
 
 const create = async(req,res) => {
     try{

@@ -18,7 +18,7 @@ const Question = sequelize.define('Question', {
 
 Question.associate = function(models){
 
-    Question.hasOne(models.User);
+    Question.belongsTo(models.User);
     Question.belongsTo(models.Post);
 
 }

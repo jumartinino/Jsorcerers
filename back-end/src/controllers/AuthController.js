@@ -1,6 +1,7 @@
 const User = require("../models/User");
 const Auth = require("../config/auth");
 const UserController = require("./UserController");
+const {validationResult} = require('express-validator');
 
 const login = async(req, res)=>{
 	try {

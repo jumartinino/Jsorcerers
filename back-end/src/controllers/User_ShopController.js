@@ -1,11 +1,27 @@
 const { response } = require('express');
 const User_shop = require('../models/User_Shop');
 const User = require('../models/User');
+const Auth = require("../config/auth");
+const {validationResult} = require('express-validator');
 
 const create = async(req,res) => {
     try{
-          const user_shop = await User_shop.create(req.body);
-          return res.status(201).json({message: "Loja cadastrado com sucesso!", user_shop: user_shop});
+        
+        validationResult(req).throw();
+        const token = Auth.getToken(req);
+        console.log(token);
+        const payload = Auth.decodeJwt(token);
+        const user = await User.findByPk(payload.sub);
+
+          const newShopData = {
+
+            name: req.body.name,
+            UserId: user.id
+
+
+          }
+          const user_shop = await User_shop.create(newShopData);
+          return res.status(201).json({message: "Loja cadastrado com sucesso!", user_shop: payload.sub});
       }catch(err){
           res.status(500).json({error: err});
       }

@@ -25,10 +25,10 @@ const Product = sequelize.define('Product', {
 
 Product.associate = function(models){
 
-    Product.belongsToMany(models.Cart_Content, {through: 'IsInCartContent', as: 'cartProduct'});
-    Product.belongsToMany(models.Favorites, {through: 'IsInFavorites', as: 'favoritedProduct'});
-    Product.belongsTo(models.Post);
-    Product.hasMany(models.Photo)
+    Product.hasMany(models.Cart_Content);
+    Product.hasMany(models.Favorites);
+    Product.hasOne(models.Post);
+    Product.belongsToMany(models.Photo, {through: "Photo-Product"})
 
 }
 

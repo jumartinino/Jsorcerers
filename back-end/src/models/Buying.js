@@ -12,7 +12,7 @@ const Buying = sequelize.define('Buying', {
 
 Buying.associate = function(models){
 
-    Buying.hasOne(models.Cart);
+    Buying.belongsTo(models.Cart);
 
 }
 

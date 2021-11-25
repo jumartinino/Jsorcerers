@@ -9,8 +9,8 @@ const Photo = sequelize.define("Photo", {
 });
 
 Photo.associate = function(models){
-	Photo.belongsTo(models.Product);
-    Photo.belongsTo(models.User);
-    Photo.belongsTo(models.User_Shop);
+	Photo.hasMany(models.Product);
+    Photo.hasOne(models.User);
+    Photo.hasOne(models.User_Shop);
 }
 module.exports = Photo;

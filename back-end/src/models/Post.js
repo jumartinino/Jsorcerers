@@ -21,8 +21,8 @@ const Post = sequelize.define('Post', {
 
 Post.associate = function(models){
 
-    Post.hasOne(models.Product);
-    Post.hasOne(models.User_Shop);
+    Post.belongsTo(models.Product);
+    Post.belongsTo(models.User_Shop);
     Post.hasMany(models.Question);
     Post.hasMany(models.Comment);
 

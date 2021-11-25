@@ -50,9 +50,9 @@ User.associate = function(models) {
     User.hasMany(models.Cart);
     User.hasOne(models.Favorites);
     User.hasMany(models.User_Shop);
-    User.belongsToMany(models.Comment, {through: "Commented", as:"userCommenting"});
-    User.belongsToMany(models.Question, {through: "madeQuestion", as: "userQuestioning"});
-    User.hasOne(models.Photo)
+    User.hasMany(models.Comment);
+    User.hasMany(models.Question);
+    User.belongsTo(models.Photo)
 
 }
 
