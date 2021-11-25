@@ -1,6 +1,6 @@
 // import React = require('react');
 import React from 'react';
-import {View, Text, TextInput, StyleSheet, SafeAreaView, StatusBar, Image, ScrollView, TouchableOpacity,ImageBackground} from 'react-native';
+import { View, Text, TextInput, StyleSheet, SafeAreaView, StatusBar, Image, ScrollView, TouchableOpacity, ImageBackground } from 'react-native';
 import COLORS from '../../components/Colors/Colors';
 import { useNavigation } from '@react-navigation/native';
 
@@ -10,11 +10,11 @@ import Routes from '../../components/Routes/index'
 
 Icon.loadFont();
 
-const HomeScreen=()=> {
+const HomeScreen = () => {
   const Navigation = useNavigation();
   return (
     <SafeAreaView>
-      <StatusBar barStyle = "dark-content" hidden = {false} backgroundColor = "white" translucent = {true}/>
+      <StatusBar barStyle="dark-content" hidden={false} backgroundColor="white" translucent={true} />
 
       <ScrollView>
 
@@ -34,7 +34,7 @@ const HomeScreen=()=> {
           <Text style={styles.categTitle}>Categorias</Text>
           <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
 
-            <View style={styles.categoriesPhotos}>
+            <View style={styles.categories}>
               <TouchableOpacity>
                 <ImageBackground style={styles.eachPhoto} source={require('../../assets/mangaDef.jpg')}>
                   <View style={styles.textView}>
@@ -73,7 +73,7 @@ const HomeScreen=()=> {
             <Text style={styles.productsTitle}>Produtos</Text>
           </View>
 
-
+          <View style={styles.categoriesPhotos}>
             <TouchableOpacity style={styles.productsEach}>
               <Image source={require('../../assets/boardprod.png')} style={styles.photo} />
               <View style={styles.productDetails}>
@@ -117,56 +117,63 @@ const HomeScreen=()=> {
               </View>
             </TouchableOpacity>
           </View>
+        </View>
       </ScrollView>
     </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
-  header:{
+  header: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     paddingVertical: 10,
-    paddingHorizontal:10,
-    marginTop:30,
+    paddingHorizontal: 10,
+    marginTop: 30,
   },
-  profile:{
-    height:50,
-    width:50,
-    borderRadius:25,
+  profile: {
+    height: 50,
+    width: 50,
+    borderRadius: 25,
   },
-  searchContainer:{
-      borderRadius:10,
-      borderColor: COLORS.darkBrown,
-      backgroundColor: '#F4F4F4',
-      flexDirection: 'row',
-      paddingHorizontal:10,  
-      width: "90%",
-      borderWidth: 1,
-      marginLeft:20
+  searchContainer: {
+    borderRadius: 10,
+    borderColor: COLORS.darkBrown,
+    backgroundColor: '#F4F4F4',
+    flexDirection: 'row',
+    paddingHorizontal: 10,
+    width: "90%",
+    borderWidth: 1,
+    marginLeft: 20
   },
-  input:{
-    fontSize:17,
+  input: {
+    fontSize: 17,
     width: "100%",
   },
-  categTitle:{
-    color: COLORS.darkBrown, 
+  categTitle: {
+    color: COLORS.darkBrown,
     fontSize: 20,
-    fontWeight:'bold',
+    fontWeight: 'bold',
     marginLeft: 20,
     paddingVertical: 5,
-    paddingHorizontal:0,   
-},
-categoriesPhotos:{
+    paddingHorizontal: 0,
+  },
+  categoriesPhotos: {
     flexDirection: 'row',
     flexWrap: 'wrap',
     justifyContent: 'space-evenly'
+  },
+  categories: {
+    flexDirection: 'row',
+    flex: 1,
+    marginVertical: 5,
+    marginHorizontal: 10,
+    borderRadius: 10
   },
   productsHeader: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     marginBottom: 0,
-    marginTop: 10
   },
   productsTitle: {
     color: COLORS.darkBrown,
@@ -189,10 +196,10 @@ categoriesPhotos:{
     backgroundColor: COLORS.lightGreen,
     marginTop: 15
   },
-  productDetails:{
+  productDetails: {
     display: 'flex',
     width: '90%',
-    justifyContent:'flex-start',
+    justifyContent: 'flex-start',
   },
   productText: {
     marginBottom: 0,
@@ -201,7 +208,27 @@ categoriesPhotos:{
   productPrice: {
     fontWeight: 'bold',
     fontSize: 15
-  }
+  },
+  eachPhoto: {
+    width: 170,
+    height: 100,
+    marginHorizontal: 5,
+    borderRadius: 10
+  },
+  textView: {
+    position: 'absolute',
+    justifyContent: 'center',
+    alignItems: 'center',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+  },
+  photoText: {
+    fontSize: 20,
+    color: 'white',
+    fontWeight: 'bold',
+  },
 })
 
 export default HomeScreen;
